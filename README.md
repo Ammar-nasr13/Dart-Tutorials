@@ -31,4 +31,14 @@
 
 - *Note* => After the program ends: The operating system completely frees all the memory allocated to the program.
 
-- 
+## How does Dart language work?
+
+- Dart works in different ways depending on the target environment, whether it's a web or a mobile application.
+- There are two main mechanisms for running Dart code.
+  1- (JIT - Just-In-Time Compilation )
+  2- (AOT - Ahead-Of-Time Compilation)
+
+## what are features of Dart language ?
+
+
+## what are versions of Dart language ?
