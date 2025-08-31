@@ -166,8 +166,25 @@
 
 2- outside libararies
 
-- These are external libraries that we use to develop our own software. Called => Packages
+- These are external libraries that we use to develop our own software. Called => Packages <br>
 
+*Comman line tools*
+
+- It is a set of commands that we use to perform many tasks.
+- Divided into => Global Commands - Project Commands - Source Code Commands <br>
+
+1-  Global Commands
+
+- dart help or dart -h or dart --help => show all commands using in dart.
+- dart --version or dart version => show Dart SDK version used.
+- dart --verbose or dart -v or dart verbose => show additional information output commands.
+- dart --enable-analytics => Allows Google to access anonymous data to improve the tool.
+- dart  --disable-analytics => Don't Allows Google to access anonymous data to improve the tool.
+- dart  --suppress-analytics => Prevent Google from accessing any anonymous data to improve the tool. <br>
+
+2- Project Commands
+
+- 
 
 **What Difference between Components of dart and Dart SDK ?**
 
