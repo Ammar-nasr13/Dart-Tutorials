@@ -35,10 +35,36 @@
 
 - Dart works in different ways depending on the target environment, whether it's a web or a mobile application.
 - There are two main mechanisms for running Dart code.
-  1- (JIT - Just-In-Time Compilation )
-  2- (AOT - Ahead-Of-Time Compilation)
+  
+  ### (JIT - Just-In-Time Compilation )
+  - It used to Development stage.
+  - It store Dart code to VM Dart to convert Dart Code to machine code.
+  - Support Hot Reload.
+  - size of app is big and slow.
+  - It used keyword dart run or flutter run.
+
+
+
+  ### (AOT - Ahead-Of-Time Compilation)
+ - It used to production or publisher stage.
+  - It convert Dart Code to Native code ( machine code ) only once.
+  - Don't Support Hot Reload.
+  - size of app is small and fast.
+  - It used keyword flutter bulid.
 
 ## what are features of Dart language ?
-
+- Open source.
+- Easy to understand => Dart syntax similar to C# and Java Syntax.
+- Browser Support => Dart code convert to Javascript code using dart2js tool.
+- OOP
+- Asyncronus programming
+- Type Safety
+- flexible compilation and Excution.
 
 ## what are versions of Dart language ?
+
+- 2011 => It was announced as an alternative to JavaScript in browsers. 
+- 2013 => release Dart 1.0 => the first use in the browser.
+- 2018 => release Dart 2.0 => using Dart with Flutter Framework.
+- 2023 => release Dart 3.0 => adding Features to Dart.
+- **New Versions** =>  [*Wkat's New*](https://dart.dev/resources/whats-new)
