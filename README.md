@@ -4,7 +4,7 @@
 - It developed by Google in 2011.
 - It used to a client side and server side. (front-end - back-end)
 - It a cross platform used to create mobile , desktop and web applications.
-- Native language. => It means that the Dart language does not need an intermediary ( compilor ) to translate its code into code that a machine can understand.
+- Native language. => It means that the Dart language does not need an intermediary ( compiler ) to translate its code into code that a machine can understand.
 
 ## What are the components of the Dart language?
 
@@ -89,3 +89,86 @@
 - Click Environment Variables....
 - In the user variable section, select Path and click Edit....
 - Click New, and enter the path to the dart-sdk directory.
+
+➡️ **Create Project Dart**
+
+- A project can be created in more than one way.
+- First Create directory with project name.
+- [*if you using Vs code*](#)
+  
+- Download Dart and Flutter Extention.
+- Open directory in VS Code.
+- Using terminal to Create dart project. or using command patel. => ctrl + shift + P .
+
+- [*if you using Android Studio*](#)
+
+- Download Dart and Flutter Extention.
+- Open directory in Android Studio.
+- choose flutter to create dart project.
+
+- [*if you using CMD*](#)
+
+- Using Command => dart create
+
+➡️ **Explain Dart SDK**
+
+- *Dart SDK consist of many components*.
+- VM Dart
+- dart2js
+- Dart Compiler
+- Libraries
+- Comman line tools
+- package manager
+- Another tools => Analysis, testing, and Formatting tools. <br>
+
+*VM Dart*
+
+- It is a powerful engine that runs Dart code. <br>
+  
+*dart2js*
+
+- Convert Dart Code to Javascript code. <br>
+
+*Dart Compiler*
+
+- JIT Compilation.
+- AOT Compilation. <br>
+
+*package manager*
+
+- It manages the external packages we use. <br>
+
+*Libraries*
+
+- Libraries are divided by location and by target platform. <br>
+
+➡️ **target platform** <br>
+
+1- Native Libraries
+
+- These are libraries dedicated to a specific operating system to access its features such as the camera, Bluetooth, files, etc.
+- These libraries are written in many languages ​​depending on the operating system such as C++, Swift, and Kotlin. <br>
+
+2- Multi Libraries
+
+- They are libraries used with all platforms to create applications. such as dart:io - dart:core - dart:math. <br>
+
+3- Web Libraries
+
+- These libraries are dedicated to the web.
+
+➡️ **Location** <br>
+
+1- inside libaries
+
+- These are all the built-in libraries found in the Dart language. <br>
+
+
+2- outside libararies
+
+- These are external libraries that we use to develop our own software. Called => Packages
+
+
+**What Difference between Components of dart and Dart SDK ?**
+
+- The components of the Dart language are the rules, while the Dart SDK is the complete set of tools that implement those rules and help you build real-world       applications.
