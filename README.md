@@ -35,17 +35,20 @@
 
 - Dart works in different ways depending on the target environment, whether it's a web or a mobile application.
 - There are two main mechanisms for running Dart code.
-  
+
+
   ### (JIT - Just-In-Time Compilation )
-  - It used to Development stage.
-  - It store Dart code to VM Dart to convert Dart Code to machine code.
-  - Support Hot Reload.
-  - size of app is big and slow.
-  - It used keyword dart run or flutter run.
+  
+ - It used to Development stage.
+- It store Dart code to VM Dart to convert Dart Code to machine code.
+- Support Hot Reload.
+- size of app is big and slow.
+- It used keyword dart run or flutter run.
 
 
 
   ### (AOT - Ahead-Of-Time Compilation)
+  
  - It used to production or publisher stage.
   - It convert Dart Code to Native code ( machine code ) only once.
   - Don't Support Hot Reload.
@@ -53,6 +56,7 @@
   - It used keyword flutter bulid.
 
 ## what are features of Dart language ?
+
 - Open source.
 - Easy to understand => Dart syntax similar to C# and Java Syntax.
 - Browser Support => Dart code convert to Javascript code using dart2js tool.
@@ -67,4 +71,21 @@
 - 2013 => release Dart 1.0 => the first use in the browser.
 - 2018 => release Dart 2.0 => using Dart with Flutter Framework.
 - 2023 => release Dart 3.0 => adding Features to Dart.
-- **New Versions** =>  [*Wkat's New*](https://dart.dev/resources/whats-new)
+- **New Versions** =>  [*What's New*](https://dart.dev/resources/whats-new)
+
+## where write Dart Code ?
+
+- Online => compilar => DartPad
+- Offline => Text eidtor => ( Vs code - Android Studio )
+
+## Dart SDK ( Software Development Kit ) <br>
+
+➡️ **Install Dart SDK**
+
+- GO TO Dart Website => [*Click here to Download SDK*](https://dart.dev/get-dart/archive)
+- After Download Dart SDK ⤵️
+- In the Windows search box (start mune), write env and click it.
+- Click Edit the system environment variables.
+- Click Environment Variables....
+- In the user variable section, select Path and click Edit....
+- Click New, and enter the path to the dart-sdk directory.
