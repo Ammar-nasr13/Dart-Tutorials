@@ -293,6 +293,27 @@
 - The value null (Null)
 
 - **Data types** => Primative data types (variables) - Non-Primative datatypes
+```dart
+Data Types
+├── Primitive Data Types
+│   ├── Static Primitive Data Types
+│   │   ├── int
+│   │   ├── double
+│   │   ├── num
+│   │   ├── bool
+│   │   └── string
+│   └── Dynamic Data Types
+│       ├── dynamic
+│       ├── var
+│       └── Object
+└── Non-Primitive Data Types
+    ├── List
+    ├── Map
+    ├── Set
+    ├── Class / Object
+    └── Function
+ ```
+   
 - **idenfiers** => هي مجموعة القواعد التي يتم مراعتها عند تسمية اي نوع من انواع البيانات
 - variables or object must be start letter (a to z)
 - variables or object don't start number or symbol => ( 0 , 1 , 2 .... or @ , # , $ )
@@ -304,5 +325,35 @@
 ##  Primative data types (variables)
 
 - **Definations** => هي عبارة عن حجرة من الذاكرة يتم تخزين فيها البيانات ويكون لها اسم مع تحديد نوع البيانات
-- **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey )
-- 
+- Varaibles = ( Type - Name - Value )
+- Structure = Varaibles name = value ;
+
+```dart
+
+ initialization , assignment, declaration
+------------------------------------------
+
+ - declaration = Varaibles name ;
+
+ - assignment = name = value ;
+
+ -  initialization = Varaibles name = value ;
+
+ - initialization =  declaration + assignment
+
+```
+
+```dart
+String Interpolation
+--------------------
+- $  => variable name only.
+- ${} => function - many variables
+```
+
+- **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey ) <br>
+
+
+ **static variables**
+
+ - 
+
