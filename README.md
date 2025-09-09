@@ -182,10 +182,50 @@
 - dart  --disable-analytics => Don't Allows Google to access anonymous data to improve the tool.
 - dart  --suppress-analytics => Prevent Google from accessing any anonymous data to improve the tool. <br>
 
-2- Project Commands
+2- Project Commands <br>
 
-- 
+*dart create*
 
+- dart create projectname
+- (--template or -t ) => any project you must specific template project => defalut template is console app => web - server-shelf - package - cli - console app . <br>
+
+*dart run*
+
+- dart run file name.dart
+- dart run :filename
+- dart run => بيروح للملف اللي اسمه نفس اسم المشروع ويقوم بتشغيله
+- dart run filename.dart  args <br>
+
+*dart compile*
+
+- dart compile
+- subcommands => ( js -  aot-snapshot -  jit-snapshot -  kernel -  wasm ) <br>
+
+*dart test*
+
+- is used to test app. <br>
+
+*dart pub*
+
+- is used to file name pubspac.yaml . and you can add packages in projects. <br>
+- **subcommands** ⤵️
+- add
+- get
+- login
+- publish
+- logout
+- outdated
+- upgrade
+- remove
+
+
+3- source code commands
+
+- dart analyze
+- dart doc
+- dart format
+- dart fix
+  
 **What Difference between Components of dart and Dart SDK ?**
 
 - The components of the Dart language are the rules, while the Dart SDK is the complete set of tools that implement those rules and help you build real-world       applications.
