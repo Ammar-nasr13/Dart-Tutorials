@@ -254,4 +254,55 @@
 -  when you put mouse on statements which have decomantation comments => show formatting for comments using markdown
 
 
-  
+ ## Structure in dart
+
+ - any program file in dart must contain main function. or any code in dart must be insidet main dart.
+ - main function => the entry point of dart program
+ -  main function can contain arguments => list<string> only .
+ -  {} => the block of code that contain all statements in program.
+ -  ; => all statements must end semi colon
+
+
+## outputs and inputs in dart
+
+**outputs**
+
+- in console applications
+- using Stdout class with methods => write or writein  ( must be import dart:io)
+- stdout.write => not new line  or  stdout.writein => new line
+- using print function ( dart core ) to output such as stdout.writein. <br>
+
+**inputs**
+
+- in console appliations
+- using Stdin class with methods => readLine sync or readByte sync  ( must be import dart:io)
+- readLine sync => accept multi line or readByte sync => accept one chat only
+
+##   Datatypes in Dart
+
+- Numbers (int, double)
+- Strings (String)
+- Booleans (bool)
+- Records ((value1, value2))
+- Functions (Function)
+- Lists (List, also known as arrays)
+- Sets (Set)
+- Maps (Map)
+- Runes ( Runes ; often replaced by the characters API)
+- Symbols (Symbol)
+- The value null (Null)
+
+- **Data types** => Primative data types (variables) - Non-Primative datatypes
+- **idenfiers** => هي مجموعة القواعد التي يتم مراعتها عند تسمية اي نوع من انواع البيانات
+- variables or object must be start letter (a to z)
+- variables or object don't start number or symbol => ( 0 , 1 , 2 .... or @ , # , $ )
+- variables or objectcan be start  underscore ( _ )
+- variables or object can use a keywords as a name
+- variables or object use case type => ( UpperCamelCase - lowerCamelCase - lowercase_with_underscores )
+
+
+##  Primative data types (variables)
+
+- **Definations** => هي عبارة عن حجرة من الذاكرة يتم تخزين فيها البيانات ويكون لها اسم مع تحديد نوع البيانات
+- **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey )
+- 
