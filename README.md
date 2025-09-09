@@ -228,4 +228,30 @@
   
 **What Difference between Components of dart and Dart SDK ?**
 
-- The components of the Dart language are the rules, while the Dart SDK is the complete set of tools that implement those rules and help you build real-world       applications.
+- The components of the Dart language are the rules, while the Dart SDK is the complete set of tools that implement those rules and help you build real-world applications.
+
+
+## Keywordes in dart
+
+- **هي مجموعة الكلمات المفتاحية التي نستخدمها في اللغة ولا يمكن استخدامها كمحددات الا بشروط معينة** .
+<img src="https://github.com/Ammar-nasr13/Files/blob/master/images/keyword1.png" height=500>
+<img src="https://github.com/Ammar-nasr13/Files/blob/master/images/keywords2.png" height=500>
+<br>
+
+**الشروط**
+
+-  1 This keyword can be used as an identifier depending on context.
+-  2 This keyword can't be used as the name of a type (a class, a mixin, an enum, an extension type, or a type alias), the name of an extension, or as an import prefix. It can be used as an identifier in all    other circumstances.
+-  3 This keyword can be used as an identifier without restriction.
+
+## Comments in dart
+
+- you can use comments to explain code or put remarkables on statements .
+- there are three types of comments ( single line comments - multi line comments - decomntation comments )
+- single line comments => //
+- muliti line comments => /* */
+-  decomntation comments => used to explain code using markdown =>  single => ///  multi => /* **/
+-  when you put mouse on statements which have decomantation comments => show formatting for comments using markdown
+
+
+  
