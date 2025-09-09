@@ -353,7 +353,34 @@ String Interpolation
 - **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey ) <br>
 
 
- **static variables**
+ **static variables** <br>
 
- - 
+*String*
 
+-  String is a class and object is also String.
+-  Any class have properties and methods.
+-  is a variable store texts. using UTF-16
+-  String can store texts in one line with using => ' '  or " "
+-  String can store texts in multi lines with using => '''  '''  or """  """
+-  String interpolation => using $ or ${}
+-  String operator => ( + ) to concatination texts .
+-  concatination automaticllay => String name = 'a' 'b' 'c';
+-   String operator => ( * ) to repeat texts . <br>
+
+**Properties**
+
+- isEmpty => return bool => بتتحقق من اذا كان النص فارغ ام لا
+- isNotEmpty => return bool => بتتحقق من اذا كان النص ليس فارغا ام لا
+- length => return int => بتشوف عدد حروف السلسلة النصية وبترجع العدد
+- runtimetype => return datatypes => هي بتعرفنا نوع البيانات المستخدم حاليا
+- codeUnits => return list<int> => ASCII هي بترجع كود كل حرف موجود في جدول
+- hashcode => return int =>  هو يعطي عنوان فريد للمتغير في الذاكرة  <br>
+
+**Methods**
+
+- toLowerCase() => return string => هي تستخدم في تحويل السلاسل النصية لحروف صغيرة
+- toUpperCase() => return string => هي تستخدم في تحويل السلاسل النصية الي حروف كبيرة
+- trim() => return string => هي تقوم بازالة المسافات الزائدة من ناحية اليمين واليسار
+- trimLeft() => return string => هي تقوم بازالة المسافات الزائدة ناحية اليسار
+- trimRight() => return string => هي تقوم بازالة المسافات الزائدة ناحية اليمين
+- 
