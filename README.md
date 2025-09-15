@@ -361,7 +361,8 @@ Data Types
    
 2- immutable
 
-**String**
+1- **String**
+
 ```text
 -  String is a class and object is also String. two have the same name.
 -  Any class have properties and methods.
@@ -454,8 +455,13 @@ var sb = StringBuffer();
 sb.wrtie("");
 sb.write("");
 sb.writeAll([]);
-sb.clear();
+sb.isEmpty
+sb.isNotEmpty
+sb.hashcode
+sb.runtimetype
+sb.length
 String s = sb.toString();
+sb.clear();
 ```
 
 **Runes**
@@ -468,3 +474,16 @@ String s = sb.toString();
 - \u
 - \u{}
 - runes
+
+
+2- **Numbers**
+
+**int**
+
+- 
+
+**Bigint**
+
+**double**
+
+**num**
