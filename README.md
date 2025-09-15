@@ -302,10 +302,17 @@ Data Types
 │   │   ├── num
 │   │   ├── bool
 │   │   └── string
-│   └── Dynamic Data Types
-│       ├── dynamic
-│       ├── var
-│       └── Object
+│   ├── Dynamic Data Types
+│   │    ├── dynamic
+│   │    ├── var
+│   │    └── Object
+│   │
+│   ├── Constants Primitive Data Types
+│   │      ├── const
+│   │      ├── final
+│   │
+│   ├── Null - Null Safety
+├
 └── Non-Primitive Data Types
     ├── List
     ├── Map
@@ -343,29 +350,40 @@ Data Types
 
 ```
 
-```dart
-String Interpolation
---------------------
-- $  => variable name only.
-- ${} => function - many variables
-```
-
 - **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey ) <br>
 
 
  **static variables** <br>
 
-*String*
+ - static ⤵️
 
--  String is a class and object is also String.
+1- used to only certian data
+   
+2- immutable
+
+**String**
+```text
+-  String is a class and object is also String. two have the same name.
 -  Any class have properties and methods.
 -  is a variable store texts. using UTF-16
 -  String can store texts in one line with using => ' '  or " "
 -  String can store texts in multi lines with using => '''  '''  or """  """
--  String interpolation => using $ or ${}
--  String operator => ( + ) to concatination texts .
+```
+
+```text
+   String operator => ( + )  | ( * )
+- ( + ) to concatination texts .
 -  concatination automaticllay => String name = 'a' 'b' 'c';
 -   String operator => ( * ) to repeat texts . <br>
+```
+
+```dart
+String Interpolation
+--------------------
+- $  => variable name only.
+- ${} => function - many variables with methods
+- multi String interpolation => ${} ${} ${}
+```
 
 **Properties**
 
@@ -383,4 +401,70 @@ String Interpolation
 - trim() => return string => هي تقوم بازالة المسافات الزائدة من ناحية اليمين واليسار
 - trimLeft() => return string => هي تقوم بازالة المسافات الزائدة ناحية اليسار
 - trimRight() => return string => هي تقوم بازالة المسافات الزائدة ناحية اليمين
-- 
+- compareTo( pramaters ) => هي تستخدم لمقارنة سلسلة نصية بسلسلة نصية اخري  وهي تقوم بارجاع 1 او -1 او 0
+- the letter of name1 grater than letter of name2 => return 1
+- the letter of name1 equel letter of name2 => return 0
+- the letter of name1 smaller than letter of name2 => return -1
+
+- substring( int start , int end ) => هي تستخدم في تقسم السلسلة النصية من بداية التحديد الي النهاية
+- contian("") => هي خاصية تستخدم من التاكد من محتوي السلسلة النصية ولو كانت موجود بترجع صح ولو كانت مش موجودة بترجع غلط
+- contains(RegExp(r'\d+')
+- startswith("") => بتستخدم للتاكد من ان السلسلة النصية تبدا ب
+- endswith("") => بتستخدم للتاكد من ان السلسلة النصية تنتهي ب
+- indexOf("") => هي تقوم بارجاع قيمة ترتيب السلسلة النصية المخزنة
+- lastIndexOf("") => هي تقوم بارجاع اخر فهرس
+- codeUnitsAt(index) => هي بترجع قيمة الحرف الموجود في النظام الثنائي
+- splite("علامة التقسيم") => هي تستخدم في تقسيم السلسلة النصية بناء علي علامة معينة ويتم تخزين القيم في قائمة
+- spliteMapJoin() => هي تقوم بتقسيم ومعالجة وارجاع السلاسل النصية
+
+```dart
+splitmapjoin(" " , هنا هنقوم بتقسم النص بطريقة التقسيم العادية
+
+onMatch:(m)=> "" , هنا في مرحلة المعالجة يتم اضافة النص المراد اضافه
+onNonMatch:(n)=>n.خاصية
+
+
+)
+``` 
+- replaceAll(From , replace ) => هي تقوم باستبدال كل نص محدد ومراد استبداله بالنص التي نقوم بوضعه
+- replaceFirst(From , replace) => هي تقوم باستبدال او نص محدد فقط بالنص المراد وضعه
+
+
+**Escape Sequence** => هي تستخدم مع السلاسل النصية
+```text
+- ( \n ) => هي تقوم بعمل سطر جديد
+- ( \t ) => tab هي بتقوم بعمل مسافة مثل
+- (\\) => print \
+- (\') => print '
+- (\") => print "
+- \u 4 numbers => بتستخدم لطباعة ايموجي
+- \u{4 numbers or more } => تستخدم لطباعة ايموجي
+- raw string => Escape Sequence قبل السلسلة النصية لابطال عمل  r هي استخدام حرف 
+```
+
+**StringBuffer**
+
+- A class for concatenating strings efficiently.
+- StringBuffer have properties and methods
+- we used to StringBuffer becuase strings is immutible
+- The strings are concatenated to a single string only when toString is called.
+- **Uesd**
+```dart
+var sb = StringBuffer();
+sb.wrtie("");
+sb.write("");
+sb.writeAll([]);
+sb.clear();
+String s = sb.toString();
+```
+
+**Runes**
+
+- way to represent Unicode code points inside Strings.
+- allow you to access to code points directly instad of code units.
+- codeUnits()
+- codeUnitAt()
+- String.FromeCharCode()
+- \u
+- \u{}
+- runes
