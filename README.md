@@ -673,10 +673,26 @@ print(rectangle.bottom); // 150
 
 ```
 
-**Constants**
+**Mathematical Constants**
 
+```dart
 
+e → const double => Base of the natural logarithms.
 
+ln10 → const double => Natural logarithm of 10.
+
+ln2 → const double => Natural logarithm of 2.
+
+log10e → const double => Base-10 logarithm of e.
+
+log2e → const double => Base-2 logarithm of e.
+
+pi → const double => The PI constant.
+
+sqrt1_2 → const double => Square root of 1/2.
+
+sqrt2 → const double => Square root of 2.
+```
 
 **Functions**
 
