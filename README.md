@@ -638,7 +638,7 @@ print(rectangle.bottom); // 600
 
 ```
 
-- Create a rectangle spanned by (left, top) and (left+width, top+height).
+- Create a rectangle spanned by (left, top , left+width, top+height).
 
 ```dart
 
@@ -673,11 +673,11 @@ print(rectangle.bottom); // 150
 
 ```
 
-**constants**
+**Constants**
 
 
 
 
-**functions**
+**Functions**
 
 
