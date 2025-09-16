@@ -476,14 +476,208 @@ sb.clear();
 - runes
 
 
-2- **Numbers**
+2- **Numbers and Math**
 
 **int**
 
-- 
+- int is class and object also is int .
+- An integer number. that mean can store interger number.
+- Numbers are stored in 64-bit space.
+- The available integer values include all integers between -2^53 and 2^53
+- Classes cannot extend, implement, or mix in int.
+- If the number is greater than the range, that wrap to that range on overflow.
+
+**differance between using int and bitwise operators in Dart and Javascript**
+
+- JavaScript does not have int, it has one type for numbers called *double-precision floating point values.*
+- double-precision floating point values can represent numbers up to a certain range less than the range of vm.
+- To ensure safe usage, we use:
+1- Int is within the allowed range for JavaScript or using Bigint.
+  
+2- Use bitwise operators in ways that allow their availability in JavaScript.
+
+**Properties**
+
+- isodd => return bool =>  هي بتتحقق من اذا كان الرقم فردي ام لا
+- isEven => return bool => بتتحقق من اذا الرقم زوجي ام لا
+- bitLength => return int => بترجع البت الخاص بالرقم
+- sign => return int => هي تستخدم لمعرفة اذا كان الرقم صفري ام موجب ام سالب
+- hashcode => return int => عنوان المتغير
+- isFinite => return bool => بتتحقق من اذا كان الرقم محدود ام لا 
+- isInFinate => return bool => بتتحقق من اذا كان الرقم غير محدود ام لا 
+- isNaN => return bool => بتتحقق من اذا كان هذا رقم ام لا 
+- isNagative => return bool => بتتحقق من اذا كان هذا الرقم سالب ام  لا 
+- runtimetype =>  return type => بتتحقق من نوع المتغير
+
+
+**Methods**
+
+- toStringAsFixed(number) => بتستخدم في تحديد كم رقم يكون بعد العلامة العشرية
+- abs() => بتجيب القيمة المطلقة للرقم
+- modPow(exponent, modulus) => ثم تقوم بارجاع ناتج باقي القسمة  modulus بتحسب الرقم الاصلي مرفوع لاس معين ثم تقوم بقسمته علي الرقم المحدد
+- compareTo(number) => هي تستخدم لمقارنة العدد برقم اخري واذا كان الرقم اكبر ترجع 1 ولو كان اصغر بترجع -1 ولو كان متساوي بترجع 0
 
 **Bigint**
 
+- Bigint y = Bigint.from(********************);
+- An arbitrarily large integer value.
+- accept inter , double , nagtive and postive number.
+- Encryption (RSA, ECC) → Because the numbers there are very huge.
+- To create a big integer from the provided number, use BigInt.from.
+- To check whether a big integer can be represented as an int without losing precision, use *isValidInt.*
+- To convert a big integer into an int, use toInt. To convert a big integer into an double, use toDouble.
+
+**Properties and Methods** => int هي نفس الموجود داخل 
+- isValidInt => ام لا int هي تتحقق من اذا كان هذا الرقم يقبل في
+- pow(exponent) => دالة تستخدم لحساب الاس
+
 **double**
 
+- double is class and object also is double .
+- A double-precision floating point number.
+- It is a compile-time error for a class to attempt to extend or implement double.
+
+
+**Properties**
+
+- hashCode
+- isFinite
+- isInfinite
+- isNaN
+- isNegative
+- runtimeType
+- sign
+
+**Methods**
+
+- abs()
+- compareTo(num other) → int 
+-  ceil() → int => بتقرب الرقم لاكبر عدد صحيح 13
+-  ceilToDouble() → double =>  بتقرب الرقم لاكبر عدد عشري اي يكون 13.00
+-  floor() → int => بيقرب الرقم لاصغر عدد صحيح
+-  floorToDouble() → double => يقرب العدد لاصغر عدد عشري
+-  round() → int => بيقرب العدد لاعلي او لاصغر عدد صحيح
+-  roundToDouble() → double => بيقرب العدد لاعلي او لاصغر عدد عشري
+-  truncate() → int => بيزيل الجزء العشري 
+-  truncateToDouble() → double => بيزيل الجزء العشري وبيكون العدد عشري
+
 **num**
+
+- An integer or floating-point number.
+- num is super class ( int - double )
+- It is a compile-time error for any type other than int or double to attempt to extend or implement num.
+
+* => int - double بنستخدم معاها الخصائص المشتركة بين 
+
+
+**dart math**
+
+- first import => dart.math
+- It contain Mathematical constants and functions, plus a random number generator.
+
+
+**Classes**
+
+*Random*
+
+- A generator of random bool, int, or double values.
+
+```daer
+Random r = Random();
+or
+var r = Random();
+```
+
+**Properties**
+
+- hashCode → int
+- runtimeType → Type
+
+**Methods**
+
+- nextInt(number) => Value is >= 0 and < number.
+-  the range from 0, inclusive, to max.
+-  oprators with  nextInt(number) => change start range to ... and end range to .....⤵️
+```dart
+nextInt(number) + 50 => change start range to 50 and end range to 60
+nextInt(number) * 50 => change start range to 0 and end range to 5000
+```
+
+- nextdouble( ) => Value is >= 0 and < 1.0.
+- oprators with  nextnextdouble() => change start range to ... and end range to .....⤵️
+
+```dart
+nextdouble() + 50 => change start range to 50.0 and end range to 60.0
+nextdouble() * 50 => change start range to 0 and end range to 5000.0
+```
+*Point*
+
+- Point is a utility class for representing two-dimensional positions.
+
+```dart
+var lefttop = const Point(x , y);
+var leftbottom = const Point(x , y);
+var righttop = const Point(x , y);
+var rightbottom = const Point(x , y);
+var centercentr = const Point(x , y);
+```
+
+*Rectangle
+
+- Rectangle is a class for representing two-dimensional axis-aligned rectangles whose properties are immutable.
+- Create a rectangle spanned by the points.
+```dart
+
+var leftTop = const Point(20, 50);
+var rightBottom = const Point(300, 600);
+var rectangle = Rectangle.fromPoints(leftTop, rightBottom);
+print(rectangle.left); // 20
+print(rectangle.top); // 50
+print(rectangle.right); // 300
+print(rectangle.bottom); // 600
+
+```
+
+- Create a rectangle spanned by (left, top) and (left+width, top+height).
+
+```dart
+
+var rectangle = const Rectangle(20, 50, 300, 600);
+print(rectangle.left); // 20
+print(rectangle.top); // 50
+print(rectangle.right); // 320
+print(rectangle.bottom); // 650
+
+```
+*MutableRectangle*
+
+- MutableRectangle is a class for representing two-dimensional axis-aligned rectangles with mutable properties.
+- Create a mutable rectangle spanned by (left, top) and (left+width, top+height).
+
+```dart
+var rectangle = MutableRectangle(20, 50, 300, 600);
+print(rectangle); // Rectangle (20, 50) 300 x 600
+print(rectangle.left); // 20
+print(rectangle.top); // 50
+print(rectangle.right); // 320
+print(rectangle.bottom); // 650
+
+// Change rectangle width and height.
+rectangle.width = 200;
+rectangle.height = 100;
+print(rectangle); // Rectangle (20, 50) 200 x 100
+print(rectangle.left); // 20
+print(rectangle.top); // 50
+print(rectangle.right); // 220
+print(rectangle.bottom); // 150
+
+```
+
+**constants**
+
+
+
+
+**functions**
+
+
