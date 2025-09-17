@@ -694,6 +694,153 @@ sqrt1_2 → const double => Square root of 1/2.
 sqrt2 → const double => Square root of 2.
 ```
 
-**Functions**
+**Mathematical Function**
+
+```dart
+- acos(num x) → double => Converts x to a double and returns its arc cosine in radians
+
+- asin(num x) → double => Converts x to a double and returns its arc sine in radians.
+
+- atan(num x) → double => Converts x to a double and returns its arc tangent in radians.
+
+- atan2(num a, num b) → double => A variant of atan.
+
+- cos(num radians) → double => Converts radians to a double and returns the cosine of the value.
+
+- exp(num x) → double => Converts x to a double and returns the natural exponent, e, to the power x. = e^num
+
+- log(num x) → double => Converts x to a double and returns the natural logarithm of the value.
+
+- max<T extends num>(T a, T b) → T => Returns the larger of two numbers.
+
+- min<T extends num>(T a, T b) → T => Returns the lesser of two numbers.
+
+- pow(num x, num exponent) → num => Returns x to the power of exponent.
+
+- sin(num radians) → double => Converts radians to a double and returns the sine of the value.
+
+- sqrt(num x) → double => Converts x to a double and returns the positive square root of the value.
+
+- tan(num radians) → double => Converts radians to a double and returns the tangent of the value.
+
+```
+
+3- **Booleans**
+
+- The reserved words true and false denote objects that are the only two instances of this class.
+- It is a compile-time error for a class to attempt to extend or implement bool.
+
+**Properties**
+
+- hashCode → int => The hash code for this object.
+- runtimeType → Type => A representation of the runtime type of the object.
+
+
+ **dynamic variables**
+
+ -  variables that are assigned any value, whether it is text, a number, or bool ز
+ -  After assigning it a value :
+
+1- Determines the type of the value => text - number - booleans
+
+2- Determines the type of the variable => String - int or doubel - bool
+
+**var**
+
+*initilization*
+- var determines the type of the variable in compile-time.
+-  var convert static variable
+- you can use Properties and Methods .
+- you can't change another type.
+
+*declaration and  assignement*
+
+-  dynamic variable
+-  var determines the type of the variable in run-time.
+-  you can't use Properties and Methods .
+- you can change another type.
+
+```dart
+
+void main() {
+  var name = "ammar"; // initilization  // convert to Stitic variable (String)
+  // name = 10; // error you can't change another type
+  print(name.isEmpty); // you can use properties and methods
+
+  var name1; // declaration
+  name1 = "Ammar"; // assignement  // dynamic
+  // print(name1.) you can't use properties and methods because dynamic variable
+
+  name1 = 10; // you can change another variable
+
+  print(name1); //10
+}
+
+```
+
+**dynamic**
+
+*initilizatio or declaration and assignment*
+
+- dynamic variable
+- dynamic determines the type of the variable in run-time.
+- you can change another type.
+- you can't use Properties and Methods .
+
+```dart
+
+void main() {
+  
+  // initilization or declaration and assignement
+  
+ dynamic name = "Ammar"; // dynamic variable
+ name=10; // you can change another type
+ // print(name.) you can't use properties and methods
+ 
+  dynamic name1 ; // declaration 
+  name1 = "Ammar"; // assignement  dynamic variable
+  print(name);
+}
+```
+
+**object**
+
+- The base class for all Dart objects except null.
+- you can use object in many cases.
+
+*object as a variable*
+
+- dynamic variable
+- object check the type of the variable in compile-time.
+- you can change another type.
+- you can't use Properties and Methods .
+
+```dart
+
+void main() {
+  Object name = "ammar"; // initilization
+  name = 10; // you can change another type
+  // print(name.) // you can't use Propertis and Methods
+
+  Object name1; // declaration
+  name1 = "Ammar"; // assignement
+  print(name1);
+}
+```
+
+**difference between dynamiv and object
+
+- object check the type of the variable in compile-time.
+- you can use properties and methods with object => casting using as
+
+
+**constants variables**
+
+
+**const**
+
+
+
+**final**
 
 
