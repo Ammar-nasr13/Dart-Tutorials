@@ -834,13 +834,271 @@ void main() {
 - you can use properties and methods with object => casting using as
 
 
-**constants variables**
+**Wildcard Variables or Ignore Variables**
+
+- A wildcard variable with the name _ declares a local variable or parameter that is non-binding.
+- Wildcard variables require a language version of at least 3.7.
+- Purpose: To ignore or not use the value.
+- It is unreachable, because Dart considers it just a placeholder.
+- **Using**⤵️
+
+1- Local variable declaration.
+```dart
+main() {
+  var _ = 1;
+  int _ = 2;
+}
+
+```
+2- For loop variable declaration.
+
+```dart
+
+void main() {
+  for (var _ in [1, 2, 3]) {
+    print("Hello");
+  }
+}
+
+
+```
+
+3- Catch clause parameters.
+
+``` dart
+
+try {
+  throw '!';
+} catch (_) {
+  print('oops');
+}
+
+```
+
+4- Generic type and function type parameters.
+
+```dart
+class T<_> {}
+void genericFunction<_>() {}
+
+takeGenericCallback(<_>() => true);
+```
+
+5- Function parameters.
+
+```dart
+
+void logMessage(String message, [int _ = 0]) {
+  print("Message: $message");
+}
+
+void main() {
+  logMessage("Hi"); // هنا بنمرر رسالة بس
+}
+
+
+```
+6- Pattern Matching
+```dart
+void main() {
+  var list = [10, 20, 30];
+
+  switch (list) {
+    case [_, var second, _]:
+      print("العنصر الثاني هو: $second");
+  }
+}
+
+```
+
+3- **Constants variables**
 
 
 **const**
 
 
+   1- const is used to define const.
+
+   2-  value of const is defined in compile-time so you must be intialization .
+
+   3- value of const can't be change .
+
+   4- The value of const store in memory only once and when you define 
+   another const . it's refer in the same place in the memory .
+   called (canonicalization)
+
+   5- used to
+
+   - Constans and exprssion math and Constans numbers .
+
+   -  list - map - set  => content can't be change and can't be modify
+
+   - instance variable which define with static keyword => static const
+
+   - const object when 
+
+   1- constructor is const 
+
+   2- instance variables are final
+
 
 **final**
 
+ 1- final is used to define const.
 
+   2- value of final is defined in run-time but you shouId give value before 
+   you run-time to prevent occur error .   
+
+   3- value of final can't be change .
+
+   4- every final is define store in the saperted place in the memory
+
+   5- Used to
+
+   - instance variable ( instance variable can be final but can't be const )
+
+   - methods which value is called during run-time 
+
+   - list - map - set  => content can't be change but can be modify
+
+   - dynamic object
+
+```text
+                                                                   final  بدلا من  const  هل يمكن استخدام 
+
+             ولكن في حالات معينة وبشرط final  ايوا ينفع اني استخدمه بدال 
+                  compile-time تكون معرفة اثناء  final   ان قيمة 
+
+1- في المجموعات لتعريف مجموعة ثابة  final مع  const يمكن استخدام 
+مع القيم  const لتعريف المجموعة  final  حيث نستخدم 
+
+
+2- فقط لتعريفها بل فك المجموعة واعطي  const مع المجموعات المتداخل لا تستخدم 
+const  وادي لكل حاجه 
+
+
+```
+
+**Late**
+
+- Late => non-nullable يستخدم مع المتغيرات التي نريد تاجيل تهيئتها وبشرط ان يكون هذه المتغير
+  
+```text
+late variable name; // declaration
+name = "Ammar"; // assignement
+
+
+```
+**Type of Late**
+
+1- late intialization => mean use late with variable.
+
+2- lazy intialization => mean use late and final with variable.
+
+-
+
+```dart
+
+late final String uniqueValue = _generateUniqueValue();
+
+String _generateUniqueValue() {
+  print('Function is being executed...');
+  return 'The final value';
+}
+
+void main() {
+  print(uniqueValue); // هنا سيتم تنفيذ الدالة للمرة الأولى فقط
+  print(uniqueValue); // هنا لن يتم تنفيذ الدالة مرة أخرى
+  print(uniqueValue); // وهنا أيضًا
+}
+
+
+```
+```dart
+Function is being executed...
+The final value
+The final value
+The final value
+```
+
+4- **Null or Null Saftey**
+
+- By defualt , Datatypes are Non-nullable.
+-  Null Saftey is a set of operators that protect types from null values ​​and the errors they cause.
+
+```dart
+
+1- ? ( Nullable Type Operator )  
+
+- تستخدم لجعل انواع البيانات تقبل قيمة Null          
+
+
+2- ! ( Null Assertion Operator )      
+
+- تستخدم لكي نقول للبرنامج ان احنا متاكدين ان نوع البيانات المستخدم لا يكون Null  وفي حالة اذا كان فعلا قيمتة NUll سةف يحدث خطاا 
+
+3- ?. ( Conditional Access Operator )         
+
+- تستخدم مع اسماء انواع البيانات في حالة استخدام خصائص او دوال هذا النوع فهي تقوم بعملية تحقق من اذا كان نوع البيانات المستخدم قيمته Null فانه لا ينفذ هذه الخصائص والدول ويطبع Null
+
+
+4- ?? " value " ( Null Coalescing Operator )
+
+- تقوم باعطاء نوع البيانات قيمة افتراضية في حالة كان قيمته Null
+
+5- ??= " value "   ( Null Aware Assignment Operator )
+
+- في حالة كان المتغير يحمل قيمة Null  فانها تقوم بتعيين قيمة له
+
+6- ...? ( Null Aware Sperad Operator)
+
+- الاستخدام الامن ل Sperad Operator في حالة كان وجود قيمة null
+
+7- ?.. ( Null-aware Cascade Operator )
+
+- الاستخدام الامن  Cascade Operator في حاله كان وجود قيمة Null
+
+  8- late
+
+- بستخدم في تاجيل تهيئة انواع البيانات 
+```
+```dart
+import 'dart:io';
+
+void main() {
+  // nullable type operator => ?
+
+  String? name; // null
+  print(name);
+
+  List<int>? age; // null
+  print(age);
+
+  List<int> age1 = []; // not null
+  print(age1);
+
+  // null Assertion operator => !
+
+  print("Enter your age :");
+  int? age2 = int.parse(
+    stdin.readLineSync()!,
+  ); // if user don't Enter input occur errrror
+  print("your age is :$age2");
+
+  // condtional Access operator => ?.
+
+  String? operator;
+  print(operator?.isEmpty);
+
+  // Null Coalesing operator
+  print(operator ?? "Ammar"); // defualt value
+
+  // Null Aware Assignment Operator
+  operator ??= "Nasr";
+  print(operator);
+}
+```
+
+## Operators in Dart
+
+- 
