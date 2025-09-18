@@ -1026,16 +1026,16 @@ The final value
 - By defualt , Datatypes are Non-nullable.
 -  Null Saftey is a set of operators that protect types from null values ​​and the errors they cause.
 
-```dart
+```text
 
 1- ? ( Nullable Type Operator )  
 
-- تستخدم لجعل انواع البيانات تقبل قيمة Null          
+- Null  تستخدم لجعل انواع البيانات تقبل قيمة          
 
 
 2- ! ( Null Assertion Operator )      
 
-- تستخدم لكي نقول للبرنامج ان احنا متاكدين ان نوع البيانات المستخدم لا يكون Null  وفي حالة اذا كان فعلا قيمتة NUll سةف يحدث خطاا 
+- تستخدم لكي نقول للبرنامج ان احنا متاكدين ان نوع البيانات المستخدم لا يكون فارغ وفي حالة اذا كان فعلا قيمتة فارغة سوف يحدث خطاا 
 
 3- ?. ( Conditional Access Operator )         
 
@@ -1044,15 +1044,15 @@ The final value
 
 4- ?? " value " ( Null Coalescing Operator )
 
-- تقوم باعطاء نوع البيانات قيمة افتراضية في حالة كان قيمته Null
+- Null تقوم باعطاء نوع البيانات قيمة افتراضية في حالة كان قيمته 
 
 5- ??= " value "   ( Null Aware Assignment Operator )
 
-- في حالة كان المتغير يحمل قيمة Null  فانها تقوم بتعيين قيمة له
+- في حالة كان المتغير يحمل قيمة فارغة  فانها تقوم بتعيين قيمة له
 
 6- ...? ( Null Aware Sperad Operator)
 
-- الاستخدام الامن ل Sperad Operator في حالة كان وجود قيمة null
+- الاستخدام الامن ل Sperad Operator في حالة كان وجود قيمة 
 
 7- ?.. ( Null-aware Cascade Operator )
 
