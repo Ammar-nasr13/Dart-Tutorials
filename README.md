@@ -1234,11 +1234,9 @@ void main() {
 
 ```dart
 
-// ========================================
-// 1. المفهوم الأساسي لـ Cascade Operator
-// ========================================
+ 1- المفهوم الأساسي لـ Cascade Operator
 
-// بدون Cascade Operator - الطريقة التقليدية
+ بدون Cascade Operator - الطريقة التقليدية
 void withoutCascade() {
   StringBuffer buffer = StringBuffer();
   buffer.write('Hello');
@@ -1248,7 +1246,7 @@ void withoutCascade() {
   print(buffer.toString()); // Hello World!
 }
 
-// مع Cascade Operator - طريقة أنيقة
+ مع Cascade Operator - طريقة أنيقة
 void withCascade() {
   StringBuffer buffer = StringBuffer()
     ..write('Hello')
