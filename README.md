@@ -1213,6 +1213,8 @@ moreFruits.addAll(fruits);
 
 print(moreFruits); // الناتج: [grape, kiwi, apple, banana, orange]
 ```
+- Spread condition
+
 ```dart
 void main() {
   bool showExtraItems = true;
