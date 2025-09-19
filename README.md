@@ -1033,7 +1033,7 @@ The final value
 - Null  تستخدم لجعل انواع البيانات تقبل قيمة          
 
 
-2- ! ( Null Assertion Operator )      
+2- ! or !. ( Null Assertion Operator )      
 
 - تستخدم لكي نقول للبرنامج ان احنا متاكدين ان نوع البيانات المستخدم لا يكون فارغ وفي حالة اذا كان فعلا قيمتة فارغة سوف يحدث خطاا 
 
@@ -1101,4 +1101,79 @@ void main() {
 
 ## Operators in Dart
 
-- 
+
+**Arthimatic operator**
+
+- ( + , - , * , / , ~/ , % )
+
+```dart
+
+
+
+
+```
+
+**Increment & Decrement**
+
+- ( a++ , ++a , a-- , --a )
+
+```dart
+
+
+
+
+```
+
+
+**Assignment operator**
+
+- ( += , -= , *= , /= , ~/= , %= )
+
+```dart
+
+
+```
+
+**Relational operator**
+
+- ( < , > , == , != , <= , >= )
+
+```dart
+
+
+
+```
+
+**Logic operator**
+
+- ( && , || , ! 
+
+```dart
+
+
+
+```
+
+
+**Spread operator**
+
+- ( ... 
+
+```dart
+
+
+
+```
+
+
+**Cascade operator**
+
+-( .. )
+
+```dart
+
+
+```
+
+
+**
