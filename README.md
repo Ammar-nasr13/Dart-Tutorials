@@ -1107,7 +1107,17 @@ void main() {
 - ( + , - , * , / , ~/ , % )
 
 ```dart
+void main() {
+  // Arthimatic operator
+  int a = 40;
+  int b = 40;
 
+  print(a + b);
+  print(a - b);
+  print(a / b); // convert to double
+  print(a ~/ b);
+  print(a % b);
+}
 
 
 
@@ -1118,7 +1128,20 @@ void main() {
 - ( a++ , ++a , a-- , --a )
 
 ```dart
+void main() {
+  // Increment & Decrement
+  int a = 40;
+  int b = 40;
 
+  print(a++); // frist print than add 1
+  print(a); // 41
+  print(++a); // add 1 then print = 42
+  print(b--); // frist print than subtract 1
+  print(b); // 39
+  print(--b); // subtract 1 then print = 38
+  print(a); // 42
+  print(b); // 38
+}
 
 
 
@@ -1130,7 +1153,17 @@ void main() {
 - ( += , -= , *= , /= , ~/= , %= )
 
 ```dart
-
+void main() {
+  // Assignment operator
+  int a = 40;
+  int b = 40;
+  print(a += b); // a = a + b   a = 80
+  print(a -= b); // a = a - b   a = 40
+  print(a *= b); // a = a * b   a = 1600
+  print(a ~/= b); // a = a ~/ b   a = 40
+  print(a %= b); // a = a % b   a = 0
+  
+}
 
 ```
 
@@ -1146,7 +1179,7 @@ void main() {
 
 **Logic operator**
 
-- ( && , || , ! 
+- ( && , || , ! )
 
 ```dart
 
@@ -1157,23 +1190,81 @@ void main() {
 
 **Spread operator**
 
-- ( ... 
+- ( ... )
+
+- used to merge more list or map in new list or map but list or map don't null => هو يستخدم لعملية الدمج بين المجموعات بشرط ان تكون المجموعة المدمجة غير فارغة
 
 ```dart
+// using spread operator
 
+var fruits = ['apple', 'banana', 'orange'];
+var moreFruits = ['grape', 'kiwi', ...fruits]; 
+
+print(moreFruits); // الناتج: [grape, kiwi, apple, banana, orange]
 
 
 ```
 
+```dart
+// without spread operator
+var fruits = ['apple', 'banana', 'orange'];
+var moreFruits = ['grape', 'kiwi'];
+moreFruits.addAll(fruits); 
+
+print(moreFruits); // الناتج: [grape, kiwi, apple, banana, orange]
+```
+```dart
+void main() {
+  bool showExtraItems = true;
+  List<String> extraItems = ['Ammar', 'Nasr'];
+
+  List<String> items = ['Mahmoud', if (showExtraItems) ...extraItems, 'Nasr'];
+  print(items);
+}
+```
 
 **Cascade operator**
 
--( .. )
+- ( .. )
+
+- هي تستخدم مع الكائن عند اجراء عليه عدة خصائص بشكل متتالي .
+- تستخدم مع المجموعات عند اجراء عليها عدة عمليات او خصائص متتالية .
+- null لايمكن استخدمها اذا كان الكائن يحتوي علي قيمة
+- لا يمكن استخدامها في حالة كانت العمليات تعيد كائنات مختلفة النوع.
 
 ```dart
 
+// ========================================
+// 1. المفهوم الأساسي لـ Cascade Operator
+// ========================================
+
+// بدون Cascade Operator - الطريقة التقليدية
+void withoutCascade() {
+  StringBuffer buffer = StringBuffer();
+  buffer.write('Hello');
+  buffer.write(' ');
+  buffer.write('World');
+  buffer.write('!');
+  print(buffer.toString()); // Hello World!
+}
+
+// مع Cascade Operator - طريقة أنيقة
+void withCascade() {
+  StringBuffer buffer = StringBuffer()
+    ..write('Hello')
+    ..write(' ')
+    ..write('World')
+    ..write('!');
+  print(buffer.toString()); // Hello World!
+}
 
 ```
+**Access operator**
 
+- ( . )
 
-**
+- used to access objects properties and methods.
+
+**Operator Precedence**
+
+- 
