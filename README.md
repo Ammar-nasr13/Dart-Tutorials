@@ -1109,8 +1109,8 @@ void main() {
 ```dart
 void main() {
   // Arthimatic operator
-  int a = 40;
-  int b = 40;
+  var a = 40;
+  var b = 40;
 
   print(a + b);
   print(a - b);
@@ -1130,8 +1130,8 @@ void main() {
 ```dart
 void main() {
   // Increment & Decrement
-  int a = 40;
-  int b = 40;
+  var a = 40;
+  var b = 40;
 
   print(a++); // frist print than add 1
   print(a); // 41
@@ -1155,8 +1155,8 @@ void main() {
 ```dart
 void main() {
   // Assignment operator
-  int a = 40;
-  int b = 40;
+  var a = 40;
+  var b = 40;
   print(a += b); // a = a + b   a = 80
   print(a -= b); // a = a - b   a = 40
   print(a *= b); // a = a * b   a = 1600
@@ -1166,13 +1166,86 @@ void main() {
 }
 
 ```
+**Type check oprator**
+
+- ( is , !is ) => return bool
+- Used to check species
+- Type Promotion means that Dart understands the type of a variable better after you confirm its type. using is or is!
+
+```dart
+// Example
+
+void main() {
+  dynamic name = "Ammar";
+  print(name is String); // true
+}
+
+// Type Promotion
+void main() {
+  
+  // Type promotion
+  dynamic name = "Ammar";
+  if (name is String){
+    
+    print("Name is : $name");
+    
+  }
+}
+
+```
+
+**Bitwise Operator**
+
+- ( & , | , ^ , ~ , << , >> )
+- => before use bitwise operator you shouid first convert numbers to binary 
+
+- &   // AND  => if two numbers contain two bits 1 result = 1  else  = 0  ( deal 8 bits )
+- |   // OR   => if one number contain  bit 1 result = 1  else  = 0        ( deal 8 bits )
+- ^   // XOR  => if two numbers contain different bits result = 1  else 0   ( deal 8 bits )
+- ~   // NOT  => reflects bits   (  deal 32 bit  ) 
+- <<  // Left Shift => transfer bit 1 left = n
+- >>  // Right Shift => transfer bit 1 right = n
+
+```dart
+void main() {
+  // 4- Bitwise Operators
+
+  int a = 5; // 0101  4 bit
+  int b = 3; // 0011  4 bit
+
+  print(a & b); // 0001 = 1   (deal 4 or 8 bits)
+  print(a | b); // 0111 = 7   (deal 4 or 8 bits)
+  print(a ^ b); // 0110 = 6   (deal 4 or 8 bits)
+  print(~a); //  11111111 11111111 11111111 11111010 = -6     (deal 32 bits)
+  print(a >> 2); // 1
+  print(a << 2); //10100 =  20
+}
+
+```
+
+
 
 **Relational operator**
 
 - ( < , > , == , != , <= , >= )
 
 ```dart
+void main() {
+  var age = 21;
+  if (age == 21) {
+    print("Age is Equel 21"); // 21
+  }
+  if (age < 22) {
+    print("Age is Less than 22");
+  }
+  if (age > 20) {
+    print("Age is Grater than 20");
+  }
 
+  if (age != 22) {
+    print("Age is Not Equel than 22");
+  }
+}
 
 
 ```
@@ -1236,26 +1309,28 @@ void main() {
 
 ```dart
 
- 1- المفهوم الأساسي لـ Cascade Operator
-
- بدون Cascade Operator - الطريقة التقليدية
-void withoutCascade() {
-  StringBuffer buffer = StringBuffer();
-  buffer.write('Hello');
-  buffer.write(' ');
-  buffer.write('World');
-  buffer.write('!');
-  print(buffer.toString()); // Hello World!
+// with out cascade operator 
+void main() {
+  
+    StringBuffer buffer = StringBuffer();
+    buffer.write('Hello');
+    buffer.write(' ');
+    buffer.write('World');
+    buffer.write('!');
+    print(buffer.toString()); // Hello World!
+  
 }
 
- مع Cascade Operator - طريقة أنيقة
-void withCascade() {
-  StringBuffer buffer = StringBuffer()
-    ..write('Hello')
-    ..write(' ')
-    ..write('World')
-    ..write('!');
-  print(buffer.toString()); // Hello World!
+// cascade operator
+void main() {
+  
+    StringBuffer buffer = StringBuffer()
+      ..write('Hello')
+      ..write(' ')
+      ..write('World')
+      ..write('!');
+    print(buffer.toString()); // Hello World!
+  
 }
 
 ```
@@ -1267,4 +1342,48 @@ void withCascade() {
 
 **Operator Precedence**
 
-- 
+```text
+1- () , [] , . , ?.
+
+2- ++ , -- , ! , -
+
+3- * , / , ~/ , %
+
+4- + , -
+
+5- << , >> , <<<
+
+6- $ , | , ^
+
+7- Relational operator with out == and != , is , !is , as
+
+8- == , ! =
+
+9- &&
+
+10- ||
+
+11- ??
+
+12- ?:
+
+13- Assignment operator
+
+```
+
+## Control flow in dart
+
+1- **Conditional statements**
+
+2- **Loops**
+
+**Conditional statements**
+
+1- **if**
+
+```text
+
+```
+```dart
+
+```
