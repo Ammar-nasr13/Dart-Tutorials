@@ -1025,6 +1025,18 @@ The final value
 
 - By defualt , Datatypes are Non-nullable.
 -  Null Saftey is a set of operators that protect types from null values ​​and the errors they cause.
+-  dynamic variables accept null except object.
+
+```dart
+
+void main() {
+  var name;
+  dynamic age ;
+  print(name);
+  print(age);
+}
+
+```
 
 ```text
 
@@ -1199,9 +1211,9 @@ void main() {
 - ( & , | , ^ , ~ , << , >> )
 - => before use bitwise operator you shouid first convert numbers to binary 
 
-- &   // AND  => if two numbers contain two bits 1 result = 1  else  = 0  ( deal 8 bits )
-- |   // OR   => if one number contain  bit 1 result = 1  else  = 0        ( deal 8 bits )
-- ^   // XOR  => if two numbers contain different bits result = 1  else 0   ( deal 8 bits )
+- &   // AND  => if two numbers contain two bits 1 result = 1  else  = 0  ( deal 8 bits and using 4 bit )
+- |   // OR   => if one number contain  bit 1 result = 1  else  = 0        ( deal 8 bits and using 4 bit)
+- ^   // XOR  => if two numbers contain different bits result = 1  else 0   ( deal 8 bits and using 4 bit )
 - ~   // NOT  => reflects bits   (  deal 32 bit  ) 
 - <<  // Left Shift => transfer bit 1 left = n
 - >>  // Right Shift => transfer bit 1 right = n
@@ -1253,8 +1265,36 @@ void main() {
 **Logic operator**
 
 - ( && , || , ! )
+- && تتطلب تحقق الشرطين
+- || تتطلب تحقق اي شرط من الشروط
+- ! تعكس الشرط
 
 ```dart
+void main() {
+  var name = "Ammar";
+  var age = 21;
+
+  if (age == 21 && name == "Ammar") {
+    print("""
+    Name is : $name
+    Age is  : $age   
+        """); // print occur becuase two condition true
+  }
+
+  if (age == 22 || name == "mahmoud") {
+    print("""
+    Name is : $name
+    Age is  : $age   
+        """); // No print occur becuase two condition false
+  }
+
+  if (!(age == 21)) {
+    print("""
+    Name is : $name
+    Age is  : $age   
+        """); // No print occur becuase  condition false
+  }
+}
 
 
 
@@ -1371,6 +1411,113 @@ void main() {
 
 ```
 
+
+
+## Converting in dart
+
+1- **Implicit Conversion**
+
+```dart
+int a = 10;
+double b = a;   // Dart don't allow implicit converting
+
+```
+
+2- **Explicit Conversion**
+
+**Type Converting**
+
+- *convert Strings to numbers*
+- to convet string to int or double or num using static methos => parse or tyrParse.
+
+```dart
+import 'dart:io';
+void main() {
+  print("Enter your Name :");
+  String? name = stdin.readLineSync();
+  print(name);
+  print("Enter your Age :");
+  num? age = num.tryParse(stdin.readLineSync()!); // convert strings to num
+  print(age);
+}
+```
+
+- *convert numbers to Strings*
+- to convert numbers toString using  => toString().
+
+```dart
+
+void main() {
+  int age = 21;
+  String adult = age.toString();
+  print(adult);
+  print(adult * 3); // string 21 21 21
+  print(age * 3); // 63 int
+}
+
+```
+- *convert int to double*
+- to convert int to double using => toDouble().
+
+- *convert double to int*
+- to convert int to double using => toInt().
+
+```dart
+void main() {
+  int a = 10;
+  double b = a.toDouble();
+  print(a); // 10
+  print(b); // 10.0
+}
+```
+- *convert num to int*
+
+- *convert num to double*
+
+- *convert double to num*
+
+- *convert int to num*
+
+```dart
+void main() {
+  // convert num to int
+  num a = 10.00;
+  int b = a.toInt();
+  print(b); // 10
+
+  // convert num to double
+  num c = 10;
+  double e = a.toDouble();
+  print(e); // 10.0
+}
+
+```
+```dart
+
+void main() {
+  int a = 10;
+  num b = num.parse('$a');
+  print(b); // 10
+}
+
+```
+
+**Type Casting**
+
+- as => تقوم بتحويل الكائن من نوع الي نوع اخر بشرط ان يكون النوعين في نفس التسلسل الهرمي
+```dart
+void main() {
+
+  dynamic name = "Ammar";
+  print(name as String);
+  print(name.runtimeType);
+  if (name is int) {
+    print("Name is int !!");
+  }
+}
+
+```
+
 ## Control flow in dart
 
 1- **Conditional statements**
@@ -1383,7 +1530,203 @@ void main() {
 
 ```text
 
+if (condition){
+statements
+}
+// if condition is true the statement excute.
+// if condition is false the statement don't excute.
 ```
 ```dart
 
+void main() {
+  String name = "Ammar";
+  if (name == "Ammar") {
+    print('Name is :$name');
+  }
+}
 ```
+2- **if-else**
+
+```text
+
+if(condition){
+
+statement1
+
+}else{
+
+statement2
+
+}
+
+// if conditoin is true the statement1 excute.
+// if condition is false the statement2 excute.
+```
+```dart
+
+void main() {
+  String name = "Ammar";
+  if (name == "Mahmoud") {
+    print('Name is :$name');
+  } else {
+    print("Name don't Equel $name");
+  }
+}
+
+```
+
+3- **if-else if-else**
+
+```text
+
+if(condition1){
+
+statement1
+
+} else if(condition2){
+
+statement2
+
+}else{
+
+statement3
+
+}
+
+// if conditoin1 is true the statement1 excute.
+//  if conditoin1 is false the condition2 excute.
+//if conditoin2 is true the statement2 excute.
+//if conditoin2 is false the statement3 excute.
+```
+
+```dart
+
+import 'dart:io';
+void main() {
+  print("Enter score your obtain :");
+  int score = int.parse(stdin.readLineSync()!);
+  if (score >= 90) {
+    print("A+");
+  } else if (score >= 85) {
+    print("A");
+  } else if (score >= 79) {
+    print("B+");
+  } else if (score >= 70) {
+    print("B");
+  } else if (score >= 65) {
+    print("C+");
+  } else if (score >= 60) {
+    print("C");
+  } else if (score >= 50) {
+    print("D");
+  } else {
+    print("F");
+  }
+}
+
+
+
+```
+
+4- **Nested if**
+
+```text
+if(condition1){
+if(condition2){
+
+statement 1
+
+}
+statement 2
+}
+
+// if condition1 is true the if statement excute.
+// if condition2 is true the statement1 excute and statement2 excute
+// if condition1 is false the two if don't excute.
+
+```
+
+```dart
+void main() {
+  String name = "Ammar";
+  int age = 21;
+  if (name == "Ammar") {
+    if (age == 21) {
+      print("Name is :$name age is :$age");
+    }
+  }
+}
+
+
+```
+
+5- **if => return - break - continue**
+
+```text
+if - return => هي تستخدم لانها الدالة وحفظ القيمة بداخلها
+if - break => هي تستخدم للخروج من الدالة عند تحقق الشرط
+if - continue => هي تستخدم لتخطي المرحلة الحالية اذا تحقق الشرط
+```
+
+6- conditonal Statement ( Ternary operator)
+
+```text
+
+condition ? expression if true : expression if false ;
+
+Nested conditional statement :
+
+condition1 ?
+  expression if true :
+   condition2 ?
+     expression if true :
+       condition3 ? expression if true :
+           expression if false;
+```
+
+```dart
+
+void main() {
+  String name = "Ammar";
+  name == "Ammar" ? print(name) : print("Name don't Equel $name");
+}
+```
+
+7- **Switch Statements**
+
+```text
+// used to compare object with many it's value
+
+switch (object){
+case ...: statements
+break;
+case .. : statements
+break;
+case ... : statements
+break;
+defualt :...
+// if all case are false the defualt excute
+}
+=======
+
+switch(){
+case ...:
+case .. : statements
+break;
+case ... : statements
+break;
+defualt :...
+// if all case are false the defualt excute
+
+
+}
+```
+```dart
+
+
+
+
+
+```
+
+2- **Loops**
