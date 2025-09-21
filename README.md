@@ -1412,7 +1412,6 @@ void main() {
 ```
 
 
-
 ## Converting in dart
 
 1- **Implicit Conversion**
@@ -1668,7 +1667,7 @@ if - break => هي تستخدم للخروج من الدالة عند تحقق �
 if - continue => هي تستخدم لتخطي المرحلة الحالية اذا تحقق الشرط
 ```
 
-6- conditonal Statement ( Ternary operator)
+6- **conditonal Statement ( Ternary operator)**
 
 ```text
 
