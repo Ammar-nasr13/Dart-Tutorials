@@ -1756,6 +1756,21 @@ void main() {
 
 2- **Loops**
 
+**for**
+
+- بنستخدمها عندما نكون علي علم بعدد التكرارات وتستخدم ك عداد .
+
+```dart
+
+for(initilization ; condition ; iteration){
+
+// statements
+
+}
+
+// initilization => thr first statement excute and excute once.
+//
+```
 
 <div align="center">
    <table border="3">
