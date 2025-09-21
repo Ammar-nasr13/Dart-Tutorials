@@ -1296,8 +1296,6 @@ void main() {
   }
 }
 
-
-
 ```
 
 
@@ -1667,7 +1665,7 @@ if - break => هي تستخدم للخروج من الدالة عند تحقق �
 if - continue => هي تستخدم لتخطي المرحلة الحالية اذا تحقق الشرط
 ```
 
-6- **conditonal Statement ( Ternary operator)**
+6- **conditonal expresions ( Ternary operator)**
 
 ```text
 
@@ -1722,6 +1720,34 @@ defualt :...
 ```
 ```dart
 
+import 'dart:io';
+
+void main() {
+  print("Enter Num1 :");
+  double? num1 = double.parse(stdin.readLineSync()!);
+  print("Enter Num2 :");
+  double? num2 = double.parse(stdin.readLineSync()!);
+  print("Enter your op => ( + , - , * , / ) :");
+  String? op = stdin.readLineSync()!;
+  switch (op) {
+    case '+':
+      print(num1 + num2);
+      break;
+    case '-':
+      print(num1 - num2);
+      break;
+    case '*':
+      print(num1 * num2);
+      break;
+    case '/':
+      if (num2 != 0) {
+        print(num1 / num2);
+      } else {
+        print("Can't Divided by Zero");
+      }
+      break;
+  }
+}
 
 
 
@@ -1729,3 +1755,46 @@ defualt :...
 ```
 
 2- **Loops**
+
+
+<div align="center">
+   <table border="3">
+            <tr class="header-row">
+                <th>المعيار</th>
+                <th>do-while</th>
+                <th>while</th>
+                <th>for</th>
+            </tr>
+            <tr>
+                <td><strong>التحقق من الشرط</strong></td>
+                <td>بعد التنفيذ</td>
+                <td>قبل التنفيذ</td>
+                <td>قبل التنفيذ</td>
+            </tr>
+            <tr>
+                <td><strong>عدد التكرار</strong></td>
+                <td>غير معروف</td>
+                <td>غير معروف</td>
+                <td>معروف غالباً</td>
+            </tr>
+            <tr>
+                <td><strong>التنفيذ الأدنى</strong></td>
+                <td>1 مرة على الأقل</td>
+                <td>0 مرة</td>
+                <td>0 مرة</td>
+            </tr>
+            <tr>
+                <td><strong>المتغيرات</strong></td>
+                <td>منفصلة خارجية</td>
+                <td>منفصلة خارجية</td>
+                <td>مدمجة في الصيغة</td>
+            </tr>
+            <tr>
+                <td><strong>الأداء</strong></td>
+                <td>متساوٍ في الغالب</td>
+                <td>متساوٍ في الغالب</td>
+                <td>متساوٍ في الغالب</td>
+            </tr>
+        </table>
+
+</div>
