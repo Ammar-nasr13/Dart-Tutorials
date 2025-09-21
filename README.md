@@ -1749,16 +1749,22 @@ void main() {
   }
 }
 
-
-
-
 ```
+
+
+**assert**
+
+- 
+
+
+
+
 
 2- **Loops**
 
 **for**
 
-- بنستخدمها عندما نكون علي علم بعدد التكرارات وتستخدم ك عداد .
+- **بنستخدمها عندما نكون علي علم بعدد التكرارات وتستخدم ك عداد .**
 
 ```dart
 
@@ -1768,9 +1774,50 @@ for(initilization ; condition ; iteration){
 
 }
 
-// initilization => thr first statement excute and excute once.
-//
+// initilization => thr first statement is excuted and excute once.
+// condition => if condition is true the statements  is excuted => if condition is false the for end.
+//  statements  => the three step is excuted.
+// iteration ( increament or Decrement ) => the four step is excuted.
 ```
+
+```dart
+
+
+```
+
+**Nested for**
+
+```dart
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**while**
+
+
+
+
+
 
 <div align="center">
    <table border="3">
@@ -1813,3 +1860,65 @@ for(initilization ; condition ; iteration){
         </table>
 
 </div>
+
+## Handling error
+
+
+## Function in dart
+
+- **هي عبارة عن مجموعة من الاكواد البرمجية المجمعة التي تؤدي مهام معينة.**
+**Features Using Function**
+  
+- orgnazing code.
+- improve Readabiltiy
+- Reusability
+- Easy to Maintainability
+- Better Testing
+- Functional Programming
+
+
+**Types of Function**
+
+- in generaly , the types of function
+  
+1- bulit in function
+
+- **هي الدوال الموجودة في اللغة ونقوم باستخدامها**
+
+2- user-define function
+
+- **هي الدوال التي نقوم بعملها**
+**User-define function**
+
+1- Regular Function
+
+2- Arrow Function
+
+3- Anonymous Function
+
+
+**Regular Function**
+
+1- Dynamic Function 
+
+```dart
+
+name_function (){
+
+// statements
+
+}
+
+```
+
+2- Void Function
+
+```dart
+
+void name_function (){
+
+// statements
+
+}
+
+```
