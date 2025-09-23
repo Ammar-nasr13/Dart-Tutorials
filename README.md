@@ -1024,6 +1024,25 @@ The final value
 4- **Null or Null Saftey**
 
 - By defualt , Datatypes are Non-nullable.
+
+**Null**
+
+- The reserved word null denotes an object that is the sole instance of this class.
+- The Null class is the only class which does not implement Object.
+- It is a compile-time error for a class to attempt to extend or implement Null.
+
+**Properties**
+
+- hashCode → int
+- runtimeType → Type
+
+**Methods**
+
+- toString() → String
+
+
+**Null Safety**
+
 -  Null Saftey is a set of operators that protect types from null values ​​and the errors they cause.
 -  dynamic variables accept null except object.
 
@@ -1782,6 +1801,11 @@ for(initilization ; condition ; iteration){
 
 ```dart
 
+void main() {
+  for (var i = 1; i <= 5; i++) {
+    print("Ammar");
+  }
+}
 
 ```
 
@@ -1789,73 +1813,76 @@ for(initilization ; condition ; iteration){
 
 ```dart
 
+for1(initilization1 ; condition1 ; iteration1){
+
+for2(initilization2 ; condition2 ; iteration2){
+
+//statements1
+
+}
+//statements2
+}
+
+// initilization1 => thr first statement1 is excuted and excute once.
+// condition1 => if condition1 is true the for1  is excuted => if condition is false the for end.
+// initilization2 =>  thr first statement1 is excuted and excute once.
+// condition2 => if condition2 is true the statements2 is excuted => if condition2 is false the for2 end and the for 1 complite.
+
+- في كل مرة تنفذ فيها الحلقة الخارجية يتم تنفيذ الحلقة الداخلية بشكل كامل ثم تستكمل الدالة الخارجية وهكذا.
+```
+
+
+**while**
+
+- **تستخدم مثل for كعداد عندما نكون عارفين عدد التكرارات مسبقا.**
+- **تستخدم ايضا عندما نكون مش عارفين عدد التكرارات مسبقا .**
+
+```dart
+initilization;
+while (){
 
 
 ```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**while**
-
-
-
-
-
-
 <div align="center">
-   <table border="3">
+   <table border="3" >
             <tr class="header-row">
-                <th>المعيار</th>
-                <th>do-while</th>
-                <th>while</th>
-                <th>for</th>
+                <th align = center>المعيار</th>
+                <th align = center>do-while</th>
+                <th align = center>while</th>
+                <th align = center>for</th>
             </tr>
             <tr>
-                <td><strong>التحقق من الشرط</strong></td>
-                <td>بعد التنفيذ</td>
-                <td>قبل التنفيذ</td>
-                <td>قبل التنفيذ</td>
+                <td align = center><strong>التحقق من الشرط</strong></td>
+                <td align = center>بعد التنفيذ</td>
+                <td align = center>قبل التنفيذ</td>
+                <td align = center>قبل التنفيذ</td>
             </tr>
             <tr>
-                <td><strong>عدد التكرار</strong></td>
-                <td>غير معروف</td>
-                <td>غير معروف</td>
-                <td>معروف غالباً</td>
+                <td align = center><strong>عدد التكرار</strong></td>
+                <td align = center>غير معروف</td>
+                <td align = center>غير معروف</td>
+                <td align = center>معروف غالباً</td>
             </tr>
             <tr>
-                <td><strong>التنفيذ الأدنى</strong></td>
-                <td>1 مرة على الأقل</td>
-                <td>0 مرة</td>
-                <td>0 مرة</td>
+                <td align = center><strong>التنفيذ الأدنى</strong></td>
+                <td align = center>1 مرة على الأقل</td>
+                <td align = center>0 مرة</td>
+                <td align = center>0 مرة</td>
             </tr>
             <tr>
-                <td><strong>المتغيرات</strong></td>
-                <td>منفصلة خارجية</td>
-                <td>منفصلة خارجية</td>
-                <td>مدمجة في الصيغة</td>
+                <td align = center><strong>المتغيرات</strong></td>
+                <td align = center>منفصلة خارجية</td>
+                <td align = center>منفصلة خارجية</td>
+                <td align = center>مدمجة في الصيغة</td>
             </tr>
             <tr>
-                <td><strong>الأداء</strong></td>
-                <td>متساوٍ في الغالب</td>
-                <td>متساوٍ في الغالب</td>
-                <td>متساوٍ في الغالب</td>
+                <td align = center><strong>الأداء</strong></td>
+                <td align = center>متساوٍ في الغالب</td>
+                <td align = center>متساوٍ في الغالب</td>
+                <td align = center>متساوٍ في الغالب</td>
             </tr>
         </table>
 
@@ -1867,7 +1894,9 @@ for(initilization ; condition ; iteration){
 ## Function in dart
 
 - **هي عبارة عن مجموعة من الاكواد البرمجية المجمعة التي تؤدي مهام معينة.**
+- **تسمي الدوال داخل الكلاسات باسم Methods**
 <br>
+
 **Features Using Function**
   
 - orgnazing code.
@@ -1889,7 +1918,9 @@ for(initilization ; condition ; iteration){
 2- user-define function
 
 - **هي الدوال التي نقوم بعملها**
+
 <br>
+
 **User-define function**
 
 1- Regular Function
@@ -1898,6 +1929,7 @@ for(initilization ; condition ; iteration){
 
 3- Anonymous Function
 
+4- Other Function ( Higher-Order Functions - Generator Functions - Async Functions - External functions - setter function - geter function )
 
 **Regular Function**
 
@@ -1924,3 +1956,109 @@ void name_function (){
 }
 
 ```
+
+3- Return Function
+
+```dart
+
+data_type name_function (){
+
+// statements
+
+return ....;
+}
+```
+**call function**
+
+```dart
+void main(){
+
+name_function();
+
+}
+
+```
+
+
+**Arrow Function**
+
+- **الدوال السهمية هي اختصار لصغية الدوال العادية .**
+- **قيم هذه الدالة تكون عبارة عن تعبيرات فقط وسطر واحد .**
+
+
+```dart
+
+// Void Function
+//  The => expr syntax is a shorthand for { expr; }.
+
+void name_function() => ......;
+
+// Return Function
+// The => expr syntax is a shorthand for { return expr; }. The => notation is sometimes referred to as arrow syntax.
+data_type name_function() => .....;
+
+// Dynamic Function
+
+name_function () => .....;
+// The => expr syntax is a shorthand for { expr; }.
+// The => expr syntax is a shorthand for { return expr; }. The => notation is sometimes referred to as arrow syntax.
+```
+
+**Lexical scope**
+
+- **يقصد بها هو مكان وجود المتغيرات فهناك نوعان من المتغيرات حسب المكان .**
+
+1- **local variable**
+- **هي المتغيرات التي توجد بداخل { }  او ( ) ولا يمكن الوصول لها الا من داخلها .**
+  
+2- **global variable**
+- **هي المتغيرات العامة التي يمكن الوصول لها من اي مكان وغالبا توضع خارج الدالة Main .**
+
+```dart
+
+// Lexical Scope
+int x = 10; // global variable
+
+void main() {
+  int xx = 11; // local variable for main() | global variable for foo();
+
+  foo() {
+    int xxx = 12; // local variable for foo()
+    print(x);
+    print(xx);
+    print(xxx);
+  }
+
+  foo();
+  // print(xxx); error
+}
+
+``` 
+
+**Lexical closures**
+
+- **هي تعني وجود دالة داخل دالة اخري واستخدام الدالة الداخلية لمتغيرات الدالة الخارجية والتعديل فيها اي انهما بمثابة الاب والابن ويلزم عمل ارجاع للدرالة الداخلية في الدالة الخارجية.**
+
+```dart
+
+
+
+
+
+
+
+```
+
+**Using**
+
+-  إدارة الأحداث Event Handling
+-  إدارة الذاكرة المؤقتة Caching
+-  إدارة الحالة State Management
+-  إعدادات التطبيق App Configuration
+-   معالجة الطلبات غير المتزامنة API Rate Limiting
+-   مدير المهام المجدولة Task Scheduler
+
+
+
+**Parameters**
+
