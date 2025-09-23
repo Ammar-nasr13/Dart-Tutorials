@@ -1680,6 +1680,7 @@ void main() {
 
 ```text
 if - return => هي تستخدم لانها الدالة وحفظ القيمة بداخلها
+=> يمكن ارجاع اكثر من شي واحد داخل كلمة return عن طريق استخدام { }
 if - break => هي تستخدم للخروج من الدالة عند تحقق الشرط
 if - continue => هي تستخدم لتخطي المرحلة الحالية اذا تحقق الشرط
 ```
@@ -1951,7 +1952,7 @@ while (){
 
 ```dart
 
-name_function (){
+function_name (){
 
 // statements
 
@@ -1963,7 +1964,7 @@ name_function (){
 
 ```dart
 
-void name_function (){
+void function_name (){
 
 // statements
 
@@ -1975,7 +1976,7 @@ void name_function (){
 
 ```dart
 
-data_type name_function (){
+data_type function_name (){
 
 // statements
 
@@ -1987,7 +1988,7 @@ return ....;
 ```dart
 void main(){
 
-name_function();
+function_name ();
 
 }
 
@@ -2012,15 +2013,15 @@ name();
 // Void Function
 //  The => expr syntax is a shorthand for { expr; }.
 
-void name_function() => ......;
+void function_name () => ......;
 
 // Return Function
 // The => expr syntax is a shorthand for { return expr; }. The => notation is sometimes referred to as arrow syntax.
-data_type name_function() => .....;
+data_type function_name () => .....;
 
 // Dynamic Function
 
-name_function () => .....;
+function_name () => .....;
 // The => expr syntax is a shorthand for { expr; }.
 // The => expr syntax is a shorthand for { return expr; }. The => notation is sometimes referred to as arrow syntax.
 ```
@@ -2122,7 +2123,113 @@ fooparent1()();
 
 ➡️**Function**
 
+- The Function class is a supertype of all function types.
+- All objects that implement Function have a function type as their runtime type.
+ 
+-  **هو عبارة عن متغير يخزن بداخلة دالة اين كان نوع هذه الدالة .**
 
+```dart
+
+// intilization
+
+Function function_name = function;
+
+// declaration then Assegnment
+
+Function function_name;
+function_name = function;
+
+```
+ ```dart
+
+// Regular Function
+
+Function function_name = sayHalow;
+
+void sayHalow(){
+print("Hallow World !");
+}
+
+void main (){
+
+function_name
+
+}
+
+// Anonymous Function
+
+Function function_name = (){
+
+Statements
+
+}
+
+void main (){
+
+function_name();
+
+}
+```
+**Notes**
+
+- **الدالة المجهولة عند تخزينها بداخل متغير Function لازم نعملها initilization علي طول .**
+- **لا يمكن ان يكون المتغير Function فارغة اي انه لا يحتوي علي قيمة Null .**
+- **يفضل استخدام المتغير Function كالتالي :**
+
+```dart
+
+// استخدم أنواع محددة للأمان أكثر
+int Function(int, int) calculator = (a, b) => a + b;
+
+// بدلاً من
+Function calculator = (a, b) => a + b; // أقل أماناً
+
+
+
+```
+
+➡️**Anonymous Function**
+
+- **هي دالة لا يوجد لها اسم وتكتب بدون اسم .**
+```dart
+
+(parameters) {
+  // body
+  return value; // اختياري
+}
+
+// Arrow function
+
+(parameters) => expression
+
+```
+- **هذه الدالة تستخدم فقط داخل دالة main وطريقة استدعاؤها هي ;() .**
+- **اذا كنت تريد استخدام الدالة في اي مكان وخصوصا خارج دالة main لابد ان تخزن بداخل متغير Function او متغير من نوع دالة .**
+
+```dart
+
+void main() {
+  () {
+    print("أهلاً وسهلاً!");
+ 
+  }();
+}
+
+```
+
+
+```dart
+
+var greet = () {
+  print("أهلاً وسهلاً!");
+  return "تم التحية";
+};
+void main() {
+  String result = greet();
+  print(result);
+}
+
+```
 
 
 ➡️**Parameters**
