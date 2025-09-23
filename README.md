@@ -1929,7 +1929,14 @@ while (){
 
 3- Anonymous Function
 
-4- Other Function ( Higher-Order Functions - Generator Functions - Async Functions - External functions - setter function - geter function )
+4- Higher-Order Functions 
+
+**important**
+
+- Lexical Scope
+- Lexical Closures
+- Function
+- Parameters
 
 **Regular Function**
 
@@ -1977,6 +1984,13 @@ name_function();
 
 }
 
+or
+void main(){
+
+var name = function_name;
+name();
+
+}
 ```
 
 
@@ -2041,13 +2055,53 @@ void main() {
 
 ```dart
 
+fooparent() {
+  int x = 10;
+  print(x);
 
+  foochild() {
+    x = x + 11;
+    print(x);
+  }
 
+  return foochild();
+}
 
+void main() {
+  fooparent(); // call function
 
-
+  var result = fooparent; // call function متغير من نوع دالة
+  result();
+}
 
 ```
+
+```dart
+
+fooparent1() {
+  int y = 20;
+  print(y);
+
+  foochild1() {
+    y = y * 2;
+    print(y);
+  }
+
+  return foochild1;
+}
+
+void main () {
+
+fooparent1()();
+
+  var result1 = fooparent1();
+  result1();
+
+
+}
+
+```
+
 
 **Using**
 
