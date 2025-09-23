@@ -23,7 +23,7 @@
 
 - Garbage Collection frees up memory automatically during run program.
 
-**Data are fressed up** 
+➡️**Data are fressed up** 
 
 - Variables or object that are stored in memory but not used in the program.
 - Variables or object that have been assigned a new value will have the old value deleted.
@@ -226,7 +226,7 @@
 - dart format
 - dart fix
   
-**What Difference between Components of dart and Dart SDK ?**
+➡️**What Difference between Components of dart and Dart SDK ?**
 
 - The components of the Dart language are the rules, while the Dart SDK is the complete set of tools that implement those rules and help you build real-world applications.
 
@@ -265,20 +265,20 @@
 
 ## outputs and inputs in dart
 
-**outputs**
+➡️**outputs**
 
 - in console applications
 - using Stdout class with methods => write or writein  ( must be import dart:io)
 - stdout.write => not new line  or  stdout.writein => new line
 - using print function ( dart core ) to output such as stdout.writein. <br>
 
-**inputs**
+➡️**inputs**
 
 - in console appliations
 - using Stdin class with methods => readLine sync or readByte sync  ( must be import dart:io)
 - readLine sync => accept multi line or readByte sync => accept one chat only
 
-##   Datatypes in Dart
+##  Datatypes in Dart
 
 - Numbers (int, double)
 - Strings (String)
@@ -353,7 +353,7 @@ Data Types
 - **Types** => ( dynamic variables - static variables - constants variables - null or null Saftey ) <br>
 
 
- **static variables** <br>
+➡️ **static variables** <br>
 
  - static ⤵️
 
@@ -386,7 +386,7 @@ String Interpolation
 - multi String interpolation => ${} ${} ${}
 ```
 
-**Properties**
+➡️**Properties**
 
 - isEmpty => return bool => بتتحقق من اذا كان النص فارغ ام لا
 - isNotEmpty => return bool => بتتحقق من اذا كان النص ليس فارغا ام لا
@@ -395,7 +395,7 @@ String Interpolation
 - codeUnits => return list<int> => ASCII هي بترجع كود كل حرف موجود في جدول
 - hashcode => return int =>  هو يعطي عنوان فريد للمتغير في الذاكرة  <br>
 
-**Methods**
+➡️**Methods**
 
 - toLowerCase() => return string => هي تستخدم في تحويل السلاسل النصية لحروف صغيرة
 - toUpperCase() => return string => هي تستخدم في تحويل السلاسل النصية الي حروف كبيرة
@@ -431,7 +431,7 @@ onNonMatch:(n)=>n.خاصية
 - replaceFirst(From , replace) => هي تقوم باستبدال او نص محدد فقط بالنص المراد وضعه
 
 
-**Escape Sequence** => هي تستخدم مع السلاسل النصية
+➡️**Escape Sequence** => هي تستخدم مع السلاسل النصية
 ```text
 - ( \n ) => هي تقوم بعمل سطر جديد
 - ( \t ) => tab هي بتقوم بعمل مسافة مثل
@@ -443,7 +443,7 @@ onNonMatch:(n)=>n.خاصية
 - raw string => Escape Sequence قبل السلسلة النصية لابطال عمل  r هي استخدام حرف 
 ```
 
-**StringBuffer**
+➡️**StringBuffer**
 
 - A class for concatenating strings efficiently.
 - StringBuffer have properties and methods
@@ -464,7 +464,7 @@ String s = sb.toString();
 sb.clear();
 ```
 
-**Runes**
+➡️**Runes**
 
 - way to represent Unicode code points inside Strings.
 - allow you to access to code points directly instad of code units.
@@ -478,7 +478,7 @@ sb.clear();
 
 2- **Numbers and Math**
 
-**int**
+➡️**int**
 
 - int is class and object also is int .
 - An integer number. that mean can store interger number.
@@ -487,7 +487,7 @@ sb.clear();
 - Classes cannot extend, implement, or mix in int.
 - If the number is greater than the range, that wrap to that range on overflow.
 
-**differance between using int and bitwise operators in Dart and Javascript**
+➡️**differance between using int and bitwise operators in Dart and Javascript**
 
 - JavaScript does not have int, it has one type for numbers called *double-precision floating point values.*
 - double-precision floating point values can represent numbers up to a certain range less than the range of vm.
@@ -496,7 +496,7 @@ sb.clear();
   
 2- Use bitwise operators in ways that allow their availability in JavaScript.
 
-**Properties**
+➡️**Properties**
 
 - isodd => return bool =>  هي بتتحقق من اذا كان الرقم فردي ام لا
 - isEven => return bool => بتتحقق من اذا الرقم زوجي ام لا
@@ -510,14 +510,14 @@ sb.clear();
 - runtimetype =>  return type => بتتحقق من نوع المتغير
 
 
-**Methods**
+➡️**Methods**
 
 - toStringAsFixed(number) => بتستخدم في تحديد كم رقم يكون بعد العلامة العشرية
 - abs() => بتجيب القيمة المطلقة للرقم
 - modPow(exponent, modulus) => ثم تقوم بارجاع ناتج باقي القسمة  modulus بتحسب الرقم الاصلي مرفوع لاس معين ثم تقوم بقسمته علي الرقم المحدد
 - compareTo(number) => هي تستخدم لمقارنة العدد برقم اخري واذا كان الرقم اكبر ترجع 1 ولو كان اصغر بترجع -1 ولو كان متساوي بترجع 0
 
-**Bigint**
+➡️**Bigint**
 
 - Bigint y = Bigint.from(********************);
 - An arbitrarily large integer value.
@@ -527,18 +527,18 @@ sb.clear();
 - To check whether a big integer can be represented as an int without losing precision, use *isValidInt.*
 - To convert a big integer into an int, use toInt. To convert a big integer into an double, use toDouble.
 
-**Properties and Methods** => int هي نفس الموجود داخل 
+➡️**Properties and Methods** => int هي نفس الموجود داخل 
 - isValidInt => ام لا int هي تتحقق من اذا كان هذا الرقم يقبل في
 - pow(exponent) => دالة تستخدم لحساب الاس
 
-**double**
+➡️**double**
 
 - double is class and object also is double .
 - A double-precision floating point number.
 - It is a compile-time error for a class to attempt to extend or implement double.
 
 
-**Properties**
+➡️**Properties**
 
 - hashCode
 - isFinite
@@ -548,7 +548,7 @@ sb.clear();
 - runtimeType
 - sign
 
-**Methods**
+➡️**Methods**
 
 - abs()
 - compareTo(num other) → int 
@@ -561,7 +561,7 @@ sb.clear();
 -  truncate() → int => بيزيل الجزء العشري 
 -  truncateToDouble() → double => بيزيل الجزء العشري وبيكون العدد عشري
 
-**num**
+➡️**num**
 
 - An integer or floating-point number.
 - num is super class ( int - double )
@@ -570,13 +570,13 @@ sb.clear();
 * => int - double بنستخدم معاها الخصائص المشتركة بين 
 
 
-**dart math**
+➡️**dart math**
 
 - first import => dart.math
 - It contain Mathematical constants and functions, plus a random number generator.
 
 
-**Classes**
+➡️**Classes**
 
 *Random*
 
@@ -588,12 +588,12 @@ or
 var r = Random();
 ```
 
-**Properties**
+➡️**Properties**
 
 - hashCode → int
 - runtimeType → Type
 
-**Methods**
+➡️**Methods**
 
 - nextInt(number) => Value is >= 0 and < number.
 -  the range from 0, inclusive, to max.
@@ -673,7 +673,7 @@ print(rectangle.bottom); // 150
 
 ```
 
-**Mathematical Constants**
+➡️**Mathematical Constants**
 
 ```dart
 
@@ -694,7 +694,7 @@ sqrt1_2 → const double => Square root of 1/2.
 sqrt2 → const double => Square root of 2.
 ```
 
-**Mathematical Function**
+➡️**Mathematical Function**
 
 ```dart
 - acos(num x) → double => Converts x to a double and returns its arc cosine in radians
@@ -730,13 +730,13 @@ sqrt2 → const double => Square root of 2.
 - The reserved words true and false denote objects that are the only two instances of this class.
 - It is a compile-time error for a class to attempt to extend or implement bool.
 
-**Properties**
+➡️**Properties**
 
 - hashCode → int => The hash code for this object.
 - runtimeType → Type => A representation of the runtime type of the object.
 
 
- **dynamic variables**
+➡️ **dynamic variables**
 
  -  variables that are assigned any value, whether it is text, a number, or bool ز
  -  After assigning it a value :
@@ -745,7 +745,7 @@ sqrt2 → const double => Square root of 2.
 
 2- Determines the type of the variable => String - int or doubel - bool
 
-**var**
+➡️**var**
 
 *initilization*
 - var determines the type of the variable in compile-time.
@@ -778,7 +778,7 @@ void main() {
 
 ```
 
-**dynamic**
+➡️**dynamic**
 
 *initilizatio or declaration and assignment*
 
@@ -803,7 +803,7 @@ void main() {
 }
 ```
 
-**object**
+➡️**object**
 
 - The base class for all Dart objects except null.
 - you can use object in many cases.
@@ -834,7 +834,7 @@ void main() {
 - you can use properties and methods with object => casting using as
 
 
-**Wildcard Variables or Ignore Variables**
+➡️**Wildcard Variables or Ignore Variables**
 
 - A wildcard variable with the name _ declares a local variable or parameter that is non-binding.
 - Wildcard variables require a language version of at least 3.7.
@@ -914,7 +914,7 @@ void main() {
 3- **Constants variables**
 
 
-**const**
+➡️**const**
 
 
    1- const is used to define const.
@@ -942,7 +942,7 @@ void main() {
    2- instance variables are final
 
 
-**final**
+➡️**final**
 
  1- final is used to define const.
 
@@ -979,7 +979,7 @@ const  وادي لكل حاجه
 
 ```
 
-**Late**
+➡️**Late**
 
 - Late => non-nullable يستخدم مع المتغيرات التي نريد تاجيل تهيئتها وبشرط ان يكون هذه المتغير
   
@@ -989,7 +989,7 @@ name = "Ammar"; // assignement
 
 
 ```
-**Type of Late**
+➡️**Type of Late**
 
 1- late intialization => mean use late with variable.
 
@@ -1025,23 +1025,23 @@ The final value
 
 - By defualt , Datatypes are Non-nullable.
 
-**Null**
+➡️**Null**
 
 - The reserved word null denotes an object that is the sole instance of this class.
 - The Null class is the only class which does not implement Object.
 - It is a compile-time error for a class to attempt to extend or implement Null.
 
-**Properties**
+➡️**Properties**
 
 - hashCode → int
 - runtimeType → Type
 
-**Methods**
+➡️**Methods**
 
 - toString() → String
 
 
-**Null Safety**
+➡️**Null Safety**
 
 -  Null Saftey is a set of operators that protect types from null values ​​and the errors they cause.
 -  dynamic variables accept null except object.
@@ -1133,7 +1133,7 @@ void main() {
 ## Operators in Dart
 
 
-**Arthimatic operator**
+➡️**Arthimatic operator**
 
 - ( + , - , * , / , ~/ , % )
 
@@ -1154,7 +1154,7 @@ void main() {
 
 ```
 
-**Increment & Decrement**
+➡️**Increment & Decrement**
 
 - ( a++ , ++a , a-- , --a )
 
@@ -1179,7 +1179,7 @@ void main() {
 ```
 
 
-**Assignment operator**
+➡️**Assignment operator**
 
 - ( += , -= , *= , /= , ~/= , %= )
 
@@ -1197,7 +1197,7 @@ void main() {
 }
 
 ```
-**Type check oprator**
+➡️**Type check oprator**
 
 - ( is , !is ) => return bool
 - Used to check species
@@ -1225,7 +1225,7 @@ void main() {
 
 ```
 
-**Bitwise Operator**
+➡️**Bitwise Operator**
 
 - ( & , | , ^ , ~ , << , >> )
 - => before use bitwise operator you shouid first convert numbers to binary 
@@ -1256,7 +1256,7 @@ void main() {
 
 
 
-**Relational operator**
+➡️**Relational operator**
 
 - ( < , > , == , != , <= , >= )
 
@@ -1281,7 +1281,7 @@ void main() {
 
 ```
 
-**Logic operator**
+➡️**Logic operator**
 
 - ( && , || , ! )
 - && تتطلب تحقق الشرطين
@@ -1318,7 +1318,7 @@ void main() {
 ```
 
 
-**Spread operator**
+➡️**Spread operator**
 
 - ( ... )
 
@@ -1355,7 +1355,7 @@ void main() {
 }
 ```
 
-**Cascade operator**
+➡️**Cascade operator**
 
 - ( .. )
 
@@ -1391,13 +1391,13 @@ void main() {
 }
 
 ```
-**Access operator**
+➡️**Access operator**
 
 - ( . )
 
 - used to access objects properties and methods.
 
-**Operator Precedence**
+➡️**Operator Precedence**
 
 ```text
 1- () , [] , . , ?.
@@ -1441,7 +1441,7 @@ double b = a;   // Dart don't allow implicit converting
 
 2- **Explicit Conversion**
 
-**Type Converting**
+➡️**Type Converting**
 
 - *convert Strings to numbers*
 - to convet string to int or double or num using static methos => parse or tyrParse.
@@ -1518,7 +1518,7 @@ void main() {
 
 ```
 
-**Type Casting**
+➡️**Type Casting**
 
 - as => تقوم بتحويل الكائن من نوع الي نوع اخر بشرط ان يكون النوعين في نفس التسلسل الهرمي
 ```dart
@@ -1771,7 +1771,8 @@ void main() {
 ```
 
 
-**assert**
+
+➡️**assert**
 
 - 
 
@@ -1781,7 +1782,7 @@ void main() {
 
 2- **Loops**
 
-**for**
+➡️**for**
 
 - **بنستخدمها عندما نكون علي علم بعدد التكرارات وتستخدم ك عداد .**
 
@@ -1809,7 +1810,7 @@ void main() {
 
 ```
 
-**Nested for**
+➡️**Nested for**
 
 ```dart
 
@@ -1832,7 +1833,7 @@ for2(initilization2 ; condition2 ; iteration2){
 ```
 
 
-**while**
+➡️**while**
 
 - **تستخدم مثل for كعداد عندما نكون عارفين عدد التكرارات مسبقا.**
 - **تستخدم ايضا عندما نكون مش عارفين عدد التكرارات مسبقا .**
@@ -1843,6 +1844,12 @@ while (){
 
 
 ```
+➡️**do while**
+
+➡️**break & continue**
+
+
+➡️**Labels**
 
 
 
@@ -1897,7 +1904,7 @@ while (){
 - **تسمي الدوال داخل الكلاسات باسم Methods**
 <br>
 
-**Features Using Function**
+➡️**Features Using Function**
   
 - orgnazing code.
 - improve Readabiltiy
@@ -1907,7 +1914,7 @@ while (){
 - Functional Programming
 
 
-**Types of Function**
+➡️**Types of Function**
 
 - in generaly , the types of function
   
@@ -1921,7 +1928,7 @@ while (){
 
 <br>
 
-**User-define function**
+➡️**User-define function**
 
 1- Regular Function
 
@@ -1929,16 +1936,16 @@ while (){
 
 3- Anonymous Function
 
-4- Higher-Order Functions 
+4- Higher-Order Functions ( Functions as first-class objects )
 
-**important**
+➡️**important**
 
 - Lexical Scope
 - Lexical Closures
-- Function
+- Function keyword
 - Parameters
 
-**Regular Function**
+➡️**Regular Function**
 
 1- Dynamic Function 
 
@@ -1975,7 +1982,7 @@ data_type name_function (){
 return ....;
 }
 ```
-**call function**
+➡️**call function**
 
 ```dart
 void main(){
@@ -1994,7 +2001,7 @@ name();
 ```
 
 
-**Arrow Function**
+➡️**Arrow Function**
 
 - **الدوال السهمية هي اختصار لصغية الدوال العادية .**
 - **قيم هذه الدالة تكون عبارة عن تعبيرات فقط وسطر واحد .**
@@ -2018,7 +2025,7 @@ name_function () => .....;
 // The => expr syntax is a shorthand for { return expr; }. The => notation is sometimes referred to as arrow syntax.
 ```
 
-**Lexical scope**
+➡️**Lexical scope**
 
 - **يقصد بها هو مكان وجود المتغيرات فهناك نوعان من المتغيرات حسب المكان .**
 
@@ -2049,7 +2056,7 @@ void main() {
 
 ``` 
 
-**Lexical closures**
+➡️**Lexical closures**
 
 - **هي تعني وجود دالة داخل دالة اخري واستخدام الدالة الداخلية لمتغيرات الدالة الخارجية والتعديل فيها اي انهما بمثابة الاب والابن ويلزم عمل ارجاع للدرالة الداخلية في الدالة الخارجية.**
 
@@ -2103,7 +2110,7 @@ fooparent1()();
 ```
 
 
-**Using**
+➡️**Using**
 
 -  إدارة الأحداث Event Handling
 -  إدارة الذاكرة المؤقتة Caching
@@ -2113,6 +2120,10 @@ fooparent1()();
 -   مدير المهام المجدولة Task Scheduler
 
 
+➡️**Function**
 
-**Parameters**
+
+
+
+➡️**Parameters**
 
