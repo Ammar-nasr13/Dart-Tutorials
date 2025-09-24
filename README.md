@@ -1073,7 +1073,7 @@ void main() {
 - تستخدم مع اسماء انواع البيانات في حالة استخدام خصائص او دوال هذا النوع فهي تقوم بعملية تحقق من اذا كان نوع البيانات المستخدم قيمته Null فانه لا ينفذ هذه الخصائص والدول ويطبع Null
 
 
-4- ?? " value " ( Null Coalescing Operator )
+4- ?? " value " or expr ?? expr ( Null Coalescing Operator )
 
 - Null تقوم باعطاء نوع البيانات قيمة افتراضية في حالة كان قيمته 
 
@@ -1687,6 +1687,9 @@ if - continue => هي تستخدم لتخطي المرحلة الحالية اذ
 
 6- **conditonal expresions ( Ternary operator)**
 
+- **يفضل انك تستقبل هذا التعبير في متغير ويمكن عدم استقبالها ولكن يفضل استقبالها .**
+- **في الدوال يمكن استخدامها مع return ويمكن وضعها كتعبير في دالة Arrow function .**
+
 ```text
 
 condition ? expression if true : expression if false ;
@@ -2011,6 +2014,7 @@ void main() {
 
 ## Handling Error
 
+- 
 
 ## Function in dart
 
