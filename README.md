@@ -1773,14 +1773,33 @@ void main() {
 
 
 
-➡️**assert**
+8- **assert**
 
-- 
-
-
-
+- **هي تستخدم في مرحلة التطوير فقط Debug Mode لالتقاط الاخطاء بسهولة .**
+- **تساعدة في إيجاد الأخطاء مبكراً .**
 
 
+**لا تستخدم في الحالات الاتية .**
+
+ - التحقق من بيانات المستخدم => نستخدم if
+- الأخطاء التي يجب معالجتها في الإنتاج
+- الحالات التي تحتاج معالجة خاص
+```dart
+
+assert (condition , " message if error ");
+// if condition is true the state is very good and the message don't excute.
+// if condition is false the state is error and the message excute.
+
+```
+```dart
+
+void main() {
+  String name = "Ammar";
+  assert(name == "M", 'error! The name equel $name');
+  print(name);
+}
+
+```
 2- **Loops**
 
 ➡️**for**
@@ -1830,8 +1849,8 @@ for2(initilization2 ; condition2 ; iteration2){
 // initilization2 =>  thr first statement1 is excuted and excute once.
 // condition2 => if condition2 is true the statements2 is excuted => if condition2 is false the for2 end and the for 1 complite.
 
-- في كل مرة تنفذ فيها الحلقة الخارجية يتم تنفيذ الحلقة الداخلية بشكل كامل ثم تستكمل الدالة الخارجية وهكذا.
 ```
+- **في كل مرة تنفذ فيها الحلقة الخارجية يتم تنفيذ الحلقة الداخلية بشكل كامل ثم تستكمل الدالة الخارجية وهكذا.**
 
 
 ➡️**while**
@@ -1840,19 +1859,49 @@ for2(initilization2 ; condition2 ; iteration2){
 - **تستخدم ايضا عندما نكون مش عارفين عدد التكرارات مسبقا .**
 
 ```dart
+// Using while => for
 initilization;
-while (){
+while ( condition ){
 
+// statements
+counter ++;
 
+}
+
+```
+```dart
+// using while when you don't know the number of iterations
+
+while (condition){
+
+// statements
+
+}
 ```
 ➡️**do while**
 
-➡️**break & continue**
+- **هي تستخدم مثل while .**
 
+```dart
+// Using do while => for
+initilization;
+do {
 
-➡️**Labels**
+// statements
+counter ++;
 
+}while ( condition )
 
+```
+```dart
+// using do  while when you don't know the number of iterations
+
+do {
+
+// statements
+
+}while (condition)
+```
 
 <div align="center">
    <table border="3" >
@@ -1896,7 +1945,71 @@ while (){
 
 </div>
 
-## Handling error
+➡️**break & continue**
+
+➡️**break**
+
+- **هي تستخدم مع حلقات التكرار للخروج منها عند تحقيق شرط معين او الخروج منها في حالات معينة .**
+- **هي  تستخدم ايضا مع switch .**
+
+```dart
+
+for (var i = 1; i <= 10; i++) {
+    if (i == 5) {
+      break;
+    }
+    print(" i = $i");
+  }
+
+
+```
+
+➡️**continue**
+
+- **هي تستخدم مع حلقات التكرار التكرار لتخطي مرحلة معينة عند شرط معين او  في حالات معينة .** 
+
+```dart
+
+ for (var j = 1; j <= 10; j++) {
+    if (j == 5) {
+      continue;
+    }
+    print(" i = $j");
+  }
+
+
+```
+
+
+➡️**Labels**
+
+- A label is an identifier followed by a colon (labelName:)
+- you can place before a statement to create a labeled statement.
+- A labeled statement can be referenced later in a break or continue statement only.
+- (break labelName; | continue labelName;)
+
+- **هي تستخدم مع الحلقات المتداخلة بشكل كبير ويمكن استخدامها ايضا مع switch .**
+
+```dart
+
+void main() {
+  outerLoop:
+  for (var i = 1; i <= 3; i++) {
+    for (var j = 1; j <= 3; j++) {
+      print('i = $i, j = $j');
+      if (i == 2 && j == 2) {
+        break outerLoop;
+      }
+    }
+  }
+  print('outerLoop exited');
+}
+
+
+
+```
+
+## Handling Error
 
 
 ## Function in dart
