@@ -2314,8 +2314,20 @@ try {
 
 - toString() → String => A string representation of this object.
 
+➡️ **How to create Custom Exception**
 
+- **الطريقة الابسط والاسرع**
+```dart
 
+throw Exception (' message ');
+
+throw constructor_typeException(' Message');
+
+// تستخدم عندما نريد القاء استثناء بسيط 
+
+```
+
+**Note** => باقي الطرق سوف نتعرف عليها في البرمجة كائنية التوجهة
 
 ➡️ **assert**
 
