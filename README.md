@@ -1774,35 +1774,6 @@ void main() {
 
 ```
 
-
-
-8- **assert**
-
-- **هي تستخدم في مرحلة التطوير فقط Debug Mode لالتقاط الاخطاء بسهولة .**
-- **تساعدة في إيجاد الأخطاء مبكراً .**
-
-
-**لا تستخدم في الحالات الاتية .**
-
- - التحقق من بيانات المستخدم => نستخدم if
-- الأخطاء التي يجب معالجتها في الإنتاج
-- الحالات التي تحتاج معالجة خاص
-```dart
-
-assert (condition , " message if error ");
-// if condition is true the state is very good and the message don't excute.
-// if condition is false the state is error and the message excute.
-
-```
-```dart
-
-void main() {
-  String name = "Ammar";
-  assert(name == "M", 'error! The name equel $name');
-  print(name);
-}
-
-```
 2- **Loops**
 
 ➡️**for**
@@ -2012,11 +1983,18 @@ void main() {
 
 ```
 
-## Handling Error
+## Handling Errors
+
+➡️ **During you coding you show**⤵️
+
+➡️ **Hints** => هي التلميحات التي تظهر اثناء التطوير ولا تؤثر علي البرنامج
+
+➡️ **warnings** => هي التحذيرات التي تظهر اثناء التطوير ولا تؤثر علي البرنامج
+
 
 ➡️ **Errors**
 
-- **هي الاخطاء او المشاكل التي تحدث في البرنامج وتمنع تشغيلة وقد تتسبب في هلاك ونفاذ الذاكرة.**
+- **هي الاخطاء او المشاكل التي تحدث في البرنامج اما اثناء التطوير او في البرنامج النهائي وقت تسبب مشاكل كبيرة ونفاذ الذاكرة.**
 
  ➡️ **Types of Errors**
 
@@ -2073,6 +2051,295 @@ void increment() {
 }
 
 
+
+```
+
+➡️ **How to handeling error in runtime ( Exceptions )**
+
+- **عشان نتعامل مع الاستثناءات بنستخدم القواعد التالية :**
+
+➡️ **try**
+
+- **هي يتم وضع بداخلها جميع الاكواد التي يتوقع انها تسبب خطا او استثناء**
+
+
+
+```dart
+
+try{
+
+// all code cause Exceptions
+
+}
+```
+
+➡️ **on**
+
+- **هي تستخدم مع try عندما نريد التعامل مع نوع خطا معين**
+- **يجب تحديد نوع الاستثناء بعدها**
+
+```dart
+
+try {
+
+// all code cause Exceptions
+
+} on Exception_type {
+
+// Message show error
+
+}
+
+```
+
+➡️ **catch**
+
+- **هي تستخدم مع try عندما نريد التعامل مع جميع الاستثناءات اين كانت نوعها**
+
+ ```dart
+try{
+
+// all code cause Exceptions
+
+}catch(parameter_based, parameter_extra){
+
+// Message show error
+
+}
+
+// parameter => هو عبارة عن كائن يمكن وضعه لمعرفة معلومات تفصيلية حول الخطا
+// parameter_based => error or exception object => e or ex  => using e
+// parameter_extra => Stack Trace or s  => توضح مسار التنفيذ الذي ادي الي الخطا
+// catch (e, s) => تستخدما عندما نريد معرفة نوع الخطا وتتبع مسار الخطا
+// catch (e) => تستخدم عندما نريد فقط معرفة نوع الخطا وعرض رسالة للمستخدم 
+```
+- **Exception: The base class for all exceptions.**
+- Error objects thrown in the case of a program failure.
+- **Error: The base class for all errors.**
+
+
+➡️**on with catch**
+
+- **نستخدم هذه الصيغة عندما نريد تحديد نوع الخطا مع اظهار رسالة الخطا واظهار معلومات اضافية للخطا**
+
+```dart
+
+try {
+
+// all code cause Exceptions
+
+} on Exception_type  catch(parameter){
+
+// Message show error
+
+}
+
+```
+➡️**on & catch**
+
+```dart
+
+try {
+
+// all code cause Exceptions
+
+} on Exception_type {
+
+// Message show error
+
+}catch(parameter){
+
+// Message show error
+
+}
+
+```
+
+
+➡️**finally**
+
+- **يتم تنفيذ الكود بداخلها سواء تم معالجة عملية الاستثناء ام لا دائما يتم تنفيذ هذا الكود**
+- **تستخدم لتنظيف الموارد مثل تنظيف الملفات انها الاتصال بقواعد البيانات**
+
+```dart
+
+file.close() => إغلاق الملفات
+db.disconnect() => قطع الاتصالات لمنع تسريب الموارد
+cache.clear() => تحرير الذاكرة لمنع استهلاك الذاكرة
+lock.release() => إلغاء القفل
+log.complete() => تسجيل النهاية
+
+```
+
+```dart
+
+try {
+
+// all code cause Exceptions
+
+} catch (e){
+
+// Message show error
+
+} finally {
+
+// any code
+
+}
+
+```
+
+
+➡️ **Type of Exceptions**
+
+- **لازم تبقي عارف ان الاستثناءات موجودة بداخلة مكتبات ( dart:io - dart:core - dart:async )**
+
+  
+➡️ **dart core**
+
+1- **FormatException**
+
+- is a class can you use with its properties and methods .
+- Exception thrown when a string or some other data does not have an expected format and cannot be parsed or processed.
+
+➡️ **properties**
+
+- message → String => A message describing the format error.
+- offset → int? => The offset in source where the error was detected.
+- source → dynamic => The actual source input which caused the error.
+
+➡️ **Mthods**
+
+- toString() → String => Returns a description of the format exception.
+
+
+2- **RangeError**
+
+- is a class can you use with its properties and methods .
+- Error thrown due to an argument value being outside an accepted range.
+- **IndexError** => A specialized RangeError used when an index is not in the range 0..indexable.length-1.
+
+➡️ **properties**
+
+ - message → dynamic => Message describing the problem.
+ - start → num? => The minimum value that value is allowed to assume.
+ - end → num? => The maximum value that value is allowed to assume.
+ - invalidValue → num? => The invalid value.
+ - stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+➡️ **Mthods**
+
+ - toString() → String => A string representation of this object.
+
+
+3- **ArgumentError**
+
+- is a class can you use with its properties and methods .
+- Error thrown when a function is passed an unacceptable argument.
+
+➡️ **properties**
+
+  - message → dynamic => Message describing the problem.
+  - invalidValue → dynamic => The invalid value.
+  - stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+
+➡️ **Mthods**
+
+ - toString() → String => A string representation of this object.
+
+
+4- **StateError**
+
+ - is a class can you use with its properties and methods .
+ - The operation was not allowed by the current state of the object.
+   
+ - **هو استثناء يحدث عندما يتم استدعاء عملية على كائن في حالة غير صالحة لهذه العملية يعني أن الكائن ليس في الحالة المناسبة لتنفيذ العملية المطلوبة.**
+
+➡️ **properties**
+
+- message → String => A string representation of this object.
+- stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+➡️ **Mthods**
+
+- toString() → String => A string representation of this object.
+
+5- **NoSuchMethodError**
+
+- is a class can you use with its properties and methods .
+- Error thrown on an invalid function or method invocation.
+
+➡️ **properties**
+
+- stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+6- **TypeError**
+
+- is a class can you use with its properties and methods .
+- Error thrown by the runtime system when a dynamic type error happens.
+  
+➡️ **properties**
+
+- stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+7- **UnsupportedError**
+
+- is a class can you use with its properties and methods .
+- The operation was not allowed by the object.
+
+➡️ **properties**
+
+- message → String?
+- stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+➡️ **Mthods**
+
+- toString() → String => A string representation of this object.
+
+=> IntegerDivisionByZeroException class => 
+- UnsupportedError كنا بنستخدمها كنوع من الاستثناءات ولكن في الاصدارات الحديثة بنستخدم
+
+8- **OutOfMemoryError**
+
+- is a class can you use with its properties and methods .
+- Error that the platform can use in case of memory shortage. => Heap Memory تستخدما عندما يطلب التطبيق ذاكرة اكبر من المتاحة في 
+
+➡️ **properties**
+
+- message → String?
+- stackTrace → StackTrace? => The stack trace at the point where this error was first thrown.
+
+➡️ **Mthods**
+
+- toString() → String => A string representation of this object.
+
+
+➡️ **assert**
+
+- **هي تستخدم في مرحلة التطوير فقط Debug Mode لالتقاط الاخطاء بسهولة .**
+- **تساعدة في إيجاد الأخطاء مبكراً .**
+
+
+**لا تستخدم في الحالات الاتية .**
+
+ - التحقق من بيانات المستخدم => نستخدم if
+- الأخطاء التي يجب معالجتها في الإنتاج
+- الحالات التي تحتاج معالجة خاص
+```dart
+
+assert (condition , " message if error ");
+// if condition is true the state is very good and the message don't excute.
+// if condition is false the state is error and the message excute.
+
+```
+```dart
+
+void main() {
+  String name = "Ammar";
+  assert(name == "M", 'error! The name equel $name');
+  print(name);
+}
 
 ```
 ## Function in dart
