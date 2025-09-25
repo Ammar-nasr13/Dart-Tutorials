@@ -2315,6 +2315,8 @@ try {
 - toString() → String => A string representation of this object.
 
 
+
+
 ➡️ **assert**
 
 - **هي تستخدم في مرحلة التطوير فقط Debug Mode لالتقاط الاخطاء بسهولة .**
