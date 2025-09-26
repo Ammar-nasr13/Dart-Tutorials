@@ -2664,7 +2664,8 @@ print("Hallow World !");
 
 void main (){
 
-function_name
+function_name (); // call with Function variable
+sayHallow(); // call with Function_name
 
 }
 
@@ -2680,6 +2681,29 @@ void main (){
 
 function_name();
 
+}
+```
+```dart
+
+Function sum = foo; // function variable => initilization
+void foo() {
+  print("Hallow World");
+}
+
+int Function(int, int) sum2 = foo2; // secure way
+
+int foo2(int a, int b) {
+  return a + b;
+}
+void main() {
+  sum(); // call with Function variable
+  // or
+  foo(); // call with Function name
+
+  print("============================================");
+
+  int result1 = foo2(10, 20); // call with Function name => 30
+  print(result1);
 }
 ```
 **Notes**
@@ -2700,7 +2724,7 @@ Function calculator = (a, b) => a + b; // أقل أماناً
 
 ```
 
-➡️**Anonymous Function**
+➡️**Anonymous Function or Lambda function**
 
 - **هي دالة لا يوجد لها اسم وتكتب بدون اسم .**
 ```dart
@@ -2742,6 +2766,62 @@ void main() {
 }
 
 ```
+
+➡️**Recursive Function**
+
+- **الدالة التكرارية هي دالة تعيد تعريف نفسها بداخل نفسها اي انها يمكن استدعاؤها بداخل نفسها**
+- **فكرة الدالة التكرارية هي نفس فكرة حلقات التكرار بالظبط تفضل الدالة تكرر نفسها حتي تقف عند حالة معينة**
+
+➡️**Component of this function**
+
+```dart
+// 1- Base Case - حالة التوقف (مهم جداً!)
+// 2- Recursive Case - الاستدعاء المتكرر
+
+void or return_type Function_name(parameter){
+
+// Base Case => if statement
+// Recursive Case => else or without else using => Function_name(process);
+
+}
+
+```
+
+➡️**Using**
+
+- **المشاكل الرياضية (المضروب - متسلسلة فيبوناتشي - حساب القوة - العدد التنازلي - التحويل للنظام الثنائي - الاعداد المتسلسلة)**
+- **الخوارزميات وهياكل البيانات في عمليات البحث والفرز**
+- **معالجة البيانات المتداخلة**
+➡️**Disadvantages**
+
+- Stack Overflow
+- slow iteration
+
+```dart
+void countdown(int n) {
+
+  // Base Case - حالة التوقف
+  if (n <= 0) {
+    print("🚀 انتهى!");
+    return;
+  }
+  print("العد: $n");
+
+  // Recursive Case 
+  countdown(n - 1);
+}
+
+void main() {
+  print("=== مثال العد التنازلي ===");
+  countdown(5);
+}
+
+
+```
+➡️ **Higher-Order Functions ( Functions as first-class objects )**
+
+
+
 
 
 ➡️**Parameters**
