@@ -1540,6 +1540,8 @@ void main() {
 
 2- **Loops**
 
+3- **Handling Errors**
+
 **Conditional statements**
 
 1- **if**
@@ -1621,22 +1623,24 @@ import 'dart:io';
 void main() {
   print("Enter score your obtain :");
   int score = int.parse(stdin.readLineSync()!);
-  if (score >= 90) {
+  if (score >= 90 && score <=100) {
     print("A+");
-  } else if (score >= 85) {
+  } else if (score >= 85 && score < 90) {
     print("A");
-  } else if (score >= 79) {
+  } else if (score >= 79 && score < 85) {
     print("B+");
-  } else if (score >= 70) {
+  } else if (score >= 70 && score < 79) {
     print("B");
-  } else if (score >= 65) {
+  } else if (score >= 65 && score < 70) {
     print("C+");
-  } else if (score >= 60) {
+  } else if (score >= 60 && && score < 65) {
     print("C");
-  } else if (score >= 50) {
+  } else if (score >= 50 && score < 60) {
     print("D");
-  } else {
-    print("F");
+  } else if (score < 50) {
+    print("D");
+  }else {
+    print("Invalid Data");
   }
 }
 
