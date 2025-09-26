@@ -2194,7 +2194,7 @@ try {
 ```
 
 
-➡️ **Type of Exceptions**
+➡️ **Type of Exceptions or Error**
 
 - **لازم تبقي عارف ان الاستثناءات موجودة بداخلة مكتبات ( dart:io - dart:core - dart:async )**
 
@@ -2216,6 +2216,34 @@ try {
 
 - toString() → String => Returns a description of the format exception.
 
+```dart
+
+import 'dart:io';
+
+void main() {
+  try {
+    print("Enter your Name :");
+    String name = stdin.readLineSync()!;
+    print("Enter your age :");
+    int age = int.parse(stdin.readLineSync()!);
+    print("""
+
+Name is : $name
+Age is : $age
+
+""");
+  } on FormatException catch (e) {
+    print("Invalid Input");
+    print(e.message);
+    print(e.offest);
+    print(e.source);
+    String ex = e.toString();
+    print(ex);
+  }
+}
+
+```
+
 
 2- **RangeError**
 
@@ -2234,6 +2262,25 @@ try {
 ➡️ **Mthods**
 
  - toString() → String => A string representation of this object.
+
+```dart
+
+void main() {
+  try {
+    List<dynamic> age = ["Ammar" , 20 , 30];
+    print(age[-1]);
+  } on RangeError catch (e) {
+    print("NOT Allowed");
+    print(e.message);
+    print(e.start);
+    print(e.end);
+    print(e.invalidValue);
+  }
+}
+
+
+```
+
 
 
 3- **ArgumentError**
@@ -2328,7 +2375,9 @@ throw Exception (' message ');
 throw constructor_typeException(' Message');
 
 // تستخدم عندما نريد القاء استثناء بسيط 
-
+// خطأ متكرر في المشروع	
+// خطأ له معالجة خاصة
+// خطأ يحمل بيانات إضافية
 ```
 
 **Note** => باقي الطرق سوف نتعرف عليها في البرمجة كائنية التوجهة
@@ -2398,7 +2447,9 @@ void main() {
 
 3- Anonymous Function
 
-4- Higher-Order Functions ( Functions as first-class objects )
+4- Recursive Function
+
+5- Higher-Order Functions ( Functions as first-class objects )
 
 ➡️**important**
 
