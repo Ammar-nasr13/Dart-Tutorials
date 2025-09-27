@@ -1718,7 +1718,10 @@ void main() {
 
 7- **Switch Statements**
 
-```text
+- **تستخدم لعمل شرط لمتغير او ثابت لجميع القيم الخاصة به**
+- **يمكن الاستغناء عن break ولكن يفضل استخدامها**
+
+```dart
 // used to compare object with many it's value
 
 switch (object){
@@ -1730,19 +1733,6 @@ case ... : statements
 break;
 defualt :...
 // if all case are false the defualt excute
-}
-=======
-
-switch(){
-case ...:
-case .. : statements
-break;
-case ... : statements
-break;
-defualt :...
-// if all case are false the defualt excute
-
-
 }
 ```
 ```dart
@@ -1777,6 +1767,133 @@ void main() {
 }
 
 ```
+
+
+**Fall-through Behavior**
+
+```dart
+
+switch(){
+case ...:
+case .. : statements
+break;
+case ... : statements
+break;
+defualt :...
+// if all case are false the defualt excute
+
+}
+```
+```dart
+import 'dart:io';
+
+void main() {
+  print("Enter your Month Season :");
+  int month = int.parse(stdin.readLineSync()!);
+  switch (month) {
+    case 12:
+    case 1:
+    case 2:
+      print('Month $month: Winter Season ');
+      break;
+    case 3:
+    case 4:
+    case 5:
+      print('Month $month: Spring Season ');
+      break;
+    case 6:
+    case 7:
+    case 8:
+      print('Month $month: Summer Season ');
+      break;
+    case 9:
+    case 10:
+    case 11:
+      print('Month $month: Autumn Season ');
+      break;
+    default:
+      print('Invalid month');
+      break;
+  }
+}
+
+
+```
+**Nested Switch**
+
+```dart
+
+/*
+A system that determines subjects based on:
+
+Department (Engineering - Medicine - Science)
+
+Academic year (first - second - third)
+ */
+void main() {
+  String department = "هندسة";
+  int year = 2;
+
+  print("الطالب في قسم $department سنة $year");
+
+  switch (department) {
+    case "هندسة":
+      switch (year) {
+        case 1:
+          print("المواد: رياضيات، فيزياء، برمجة أساسية");
+          break;
+        case 2:
+          print("المواد: دوال تفاضلية، دوائر كهربية، برمجة متقدمة");
+          break;
+        case 3:
+          print("المواد: تحكم آلي، إلكترونيات، تصميم أنظمة");
+          break;
+        default:
+          print("السنة غير معروفة في قسم الهندسة");
+      }
+      break;
+
+    case "طب":
+      switch (year) {
+        case 1:
+          print("المواد: تشريح، فيسيولوجيا، كيمياء حيوية");
+          break;
+        case 2:
+          print("المواد: أمراض، صيدلة، ميكروبيولوجيا");
+          break;
+        case 3:
+          print("المواد: طب باطني، جراحة، أطفال");
+          break;
+        default:
+          print("السنة غير معروفة في قسم الطب");
+      }
+      break;
+
+    case "علوم":
+      switch (year) {
+        case 1:
+          print("المواد: كيمياء عامة، فيزياء عامة، أحياء عامة");
+          break;
+        case 2:
+          print("المواد: كيمياء عضوية، فيزياء حديثة، وراثة");
+          break;
+        case 3:
+          print("المواد: كيمياء تحليلية، فيزياء كمومية، تكنولوجيا حيوية");
+          break;
+        default:
+          print("السنة غير معروفة في قسم العلوم");
+      }
+      break;
+
+    default:
+      print("القسم غير معروف");
+  }
+}
+
+
+```
+
+
 
 2- **Loops**
 
