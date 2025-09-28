@@ -2937,8 +2937,56 @@ void main() {
 ```
 ➡️ **Higher-Order Functions ( Functions as first-class objects )**
 
+-  pass a function as a parameter to another function.
+
+```dart
+
+void printElement(int element) {
+  print(element);
+}
+
+var list = [1, 2, 3];
+
+// Pass printElement as a parameter.
+list.forEach(printElement);
+```
+
+➡️**Notes**
+
+- **pure function** => الدالة النقية هي الدالة التي لا تؤثر خارجيا وانما نفس المدخلات هي نفس المخرجات
+
+```dart
+
+int sum(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  print(sum(2, 3)); // 5
+  print(sum(2, 3)); // 5 - نفس المدخل → نفس المخرج
+}
 
 
+```
+➡️**Non Pure Function**
+
+```dart
+int total = 0;
+
+void addToTotal(int x) {
+  total = total + x; // بتغير في متغير براها
+  print(total); // بتطبع - تأثير جانبي
+}
+
+void main() {
+  addToTotal(5); // 5
+  addToTotal(5); // 10 - نفس المدخل بس مخرج مختلف!
+}
+
+
+
+
+```
 
 
 ➡️**Parameters**
