@@ -2984,10 +2984,118 @@ void main() {
 }
 
 
-
-
 ```
 
 
 ➡️**Parameters**
 
+➡️ **What difference between Parameters && Arguments**
+
+- **Parameters** => It is the variable listed in the function definition. or It is the placeholder for the value that the function will use.
+- **Arguments** => It is the actual value that is passed to the function when it is called.
+- It is the value that the parameter will take when the function is executed.
+
+➡️ **Types of Parameters**
+
+1- **Requied Positonal Parameters**
+
+- **هو ال Parameters التي  يتم اعطاؤه للدالة ويلزم تمرير له Arguments بالترتيب**
+
+```dart
+int add(int a , int b){
+return a + b;
+}
+void main (){
+
+int result = add(10 , 20);
+print(result);
+}
+
+```
+
+2- **Optional Positonal Parameters**
+
+- **هو ال Parameters التي يتم اعطاؤه للدلة ويمكن تمرير له Arguments او لا يمكن**
+- **يتم وضع ال Parameters بين [] لجعلها optional**
+
+```dart
+void printDetails(String name, [int? age]) {
+  print('Name: $name');
+  if (age != null) {
+    print('Age: $age');
+  }
+}
+
+void main() {
+  printDetails('Alice'); // Age is omitted
+  printDetails('Bob', 25);
+}
+
+
+
+```
+
+3- **Optional Named Parameters**
+
+- **هي ال Parameters التي يتم اعطاؤها للدالة ويمكن تمرير لها Arguments ام لا وعند تمرير قيم يلزم كتابة القيمة مع اسمها وهنا لا يفرق الترتيب**
+
+- **يتم وضع ال Parameters بين {}**
+```dart
+
+void printPersonDetails({String? name, int? age}) {
+  print('Name: $name, Age: $age');
+}
+
+void main() {
+  printPersonDetails(name: 'Alice', age: 30);
+  printPersonDetails(age: 25, name: 'Bob');
+  printPersonDetails(name: 'Charlie'); 
+  printPersonDetails(age: 40);
+}
+
+
+```
+
+4- **Required Named Parameters**
+
+- **هي Named Parameters ولكن يتم وضع كلمه Required قبل المتغيرات عشان نلزم بتمرير Arguments**
+
+```dart
+
+void printPersonDetails({required String name, required int age}) {
+  print('Name: $name, Age: $age');
+}
+
+void main() {
+  printPersonDetails(name: 'Alice', age: 30); // must provide both
+  // printPersonDetails(name: 'Bob'); // Error: missing required 'age'
+}
+
+
+```
+
+5- **Optional Parameters as Defulte Value**
+
+- Both positional and named parameters can have default values.
+
+```dart
+
+void printMessage(String message, [String prefix = 'INFO']) {
+  print('[$prefix] $message');
+}
+
+void main() {
+  printMessage('Hello'); // [INFO] Hello
+  printMessage('Hello', 'DEBUG'); // [DEBUG] Hello
+}
+
+```
+
+6- **Mix Parameters**
+
+- **You can combine different types of parameters, but the order must be:**
+1-  Required positional parameters
+  
+2-  Optional positional parameters
+
+3-  Named parameters (any required named parameters must be in the named section)
