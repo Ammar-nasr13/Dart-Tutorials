@@ -3094,6 +3094,7 @@ void main() {
 6- **Mix Parameters**
 
 - **You can combine different types of parameters, but the order must be:**
+
 1-  Required positional parameters
   
 2-  Optional positional parameters
