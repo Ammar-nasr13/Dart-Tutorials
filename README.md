@@ -3101,7 +3101,18 @@ or
 
 3-  Named parameters (any required named parameters must be in the named section)
 
+```dart
 
+void printinfoo(String name, [int? age]) {
+  print("Name is :$name , Age is :$age");
+}
+
+void main() {
+  printinfoo("Ammar", 21);
+  printinfoo("Ammar");
+}
+
+```
 ## Collection in dart
 
 
