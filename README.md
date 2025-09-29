@@ -3093,10 +3093,25 @@ void main() {
 
 6- **Mix Parameters**
 
-- **You can combine different types of parameters, but the order must be:**
-
-1-  Required positional parameters
-  
+- **You can combine Required positional parameters with**
+ 
 2-  Optional positional parameters
 
+or
+
 3-  Named parameters (any required named parameters must be in the named section)
+
+
+## Collection in dart
+
+
+## Data Time in dart
+
+
+## Pattern in Dart
+
+============================================================================================================================
+## OOP in Dart
+----------------
+
+## Class && Object in OOP
